@@ -39,7 +39,7 @@
   </head>
   <body>
     <form id="login" action="login_check.php" method="post">
-      <label for="username">Username</label>
+      <label for="username">Usernameeee</label>
       <input type="text" id="username" name="username"><br>
       <label for="password">Password</label>
       <input type="password" id="password" name="password"><br>
