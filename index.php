@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="title">
-            <h1>Home</h1>
+            <h1>Homenhhhhhhhhhhh</h1>
 
         </div>
         <div class="view">
