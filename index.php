@@ -30,7 +30,7 @@
                 <img src="./Img/1.png" alt="">
             </div>
             <div class="container">
-                <h4><b>WIFIg,jjt</b></h4>
+                <h4><b>WIFI</b></h4>
                 <p>Sold</p>
             </div>
         </div>
