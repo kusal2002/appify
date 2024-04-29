@@ -1,5 +1,7 @@
 body {
   background-color: #2d3c3e;
+  padding: 0;
+  margin: 0;
 }
 /* Navbar */
 .navbar .container {
@@ -118,14 +120,20 @@ body {
   justify-items: center;
 }
 
-.sampletabs .card .image img{
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    object-fit: cover;
+.sampletabs .card a {
+  text-decoration: none;
+  color: #080808;
+}
+
+.sampletabs .card .image img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
 }
 
 .sampletabs .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(111, 92, 92, 0.2);
+  box-shadow: 0 10px 16px 10px rgba(13, 186, 209, 0.9);
+  cursor: pointer;
 }
 
 .sampletabs .container {
@@ -137,12 +145,17 @@ body {
 /* HomePage End*/
 
 /* Footer */
-.footer .container{
-  background-color: #a64f4f;
+.footer{
+  padding: 20px 0 0 0 ;
+  margin: 0;
 }
 
-.footer .container .logo img{
-    width: 120px;
+.footer .container {
+  background-color: #262d2e;
+}
+
+.footer .container .logo img {
+  width: 120px;
 }
 
 .footer .container .links {
@@ -150,13 +163,38 @@ body {
   margin-left: 30px;
 }
 
-.footer .container .links table tr td a
+.footer .container .links table tr td h2,a {
+  text-decoration: none;
+  color: #00bdd6;
+}
+
+.footer .container .links table tr td a{
+  text-decoration: none;
+  color: #d8e3e5;
+}
+
+.footer .container .links table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+
+.footer .cren
 {
-text-decoration: none;
+  text-align: center;
+  color: #00bdd6;
 
 }
 
-.footer .container .links table  {
-width: 100%;
-background-color: #280000;
+/* Footer End*/
+
+/* Apps Page */
+
+.containerapps .titleapps h1
+{
+  color: #00bdd6;
+  text-align: center;
+  font-size: 50px;
 }
+
+/* Apps Page END*/
