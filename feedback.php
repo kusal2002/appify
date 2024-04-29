@@ -16,10 +16,10 @@
 
 
             font-family: Inter;
-            font-size: 40px;
+            font-size: 15px;
             line-height: 28px;
             font-weight: 400;
-            color: #BCC1CAFF;
+            color: rgb(0, 0, 0);
             /* neutral-400 */
             background: #FFFFFFFF;
             /* white */
@@ -44,7 +44,7 @@
             padding: 60px 60px;
             height: 500px;
             background-color: #fff;
-            margin: 15% auto;
+            margin:5% auto;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         }
 
@@ -85,7 +85,7 @@
     <form id="login" action="login_check.php" method="post">
         <h1>Feedback</h1>
         <br>
-        <textarea type="text" id="username" name="username" rows="5" cols="10"></textarea>
+        <textarea rows="4" cols="50" placeholder="Type Your Feedback"></textarea>
         <br><br>
         <center>
             <span class="fa fa-star checked"></span>
@@ -101,6 +101,10 @@
     </form>
 
 </body>
+
+
+
+
 
 
 </html>
