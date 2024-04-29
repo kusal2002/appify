@@ -1,0 +1,44 @@
+.text ,.textarea{
+    width: 90%;
+
+    opacity: 1; 
+    border-radius: 5px; 
+    border-width: 1px; 
+    border-color: #00BDD6FF; /* primary-500 */
+    border-style: solid;
+}
+label{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+.col{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    float: right;
+    margin: 1%;
+    top: 498px; 
+    left: 1243px; 
+    width: 117px; 
+    height: 36px; 
+    padding: 0 12px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: Inter; 
+    font-size: 14px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: #00BDD6FF; /* primary-500 */
+    background: #00000000; /* transparent */
+    opacity: 1; 
+    border-radius: 18px; 
+    border-width: 1px; 
+    border-color: #00BDD6FF; /* primary-500 */
+    border-style: solid; 
+}
+
+.btn:hover{
+    color: rgb(0, 0, 0);
+}
