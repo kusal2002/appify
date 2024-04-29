@@ -12,9 +12,6 @@
             <!-- <li><a href="#">About Us</a> </li>
                 <li><a href="#">Contact Us</a> </li> -->
         </div>
-        <!-- <div class="search">
-              <input type="text" placeholder="Search...">
-            </div> -->
         <div class="auth">
             <button><a href="login.php"">Login</a></button>
               <button><a href=" register.php"">Register</a></button>
