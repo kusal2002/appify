@@ -2,72 +2,34 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Register</title>
-    <style>
-        body {
-            background-color: #f0f8ff;
-        }
+<title>Login</title>
+    <link rel="stylesheet" href="./css/auth_style.css">
 
-        .container {
-            background-color: #e6e6ff;
-            text-align: center;
-            border-radius: 25px;
-            padding: 20px;
-            margin: 20px;
-        }
+    <style media="screen">
 
-        .text {
-            font-size: 24px;
-        }
+    </style>  
+  </head>
+  <body>
+    <form id="login" action="login_check.php" method="post">
+      <h1><center>REGISTER</h1><br>
+      <center><button type="submit">User</button>
+    <button type="submit">Publisher</button></center><br><br>
+    <lable >First name</lable>
+    <input type="text" id="firstname" name="firstname">
+    <lable>Last Name</lable>
+    <input type="text" id="lastname" name="lastname"><br>
+    <lable>Email</lable>
+    <input type="text" id="email" name="email"><br>
+    <lable>Password</lable>
+    <input type="text" id="password" name="password" ><br>
+    <lable>Confirm Password</lable>
+    <input type="text" id="cpassword" name="cpassword"><br>
 
-        input[type=text],
-        input[type=password] {
-            width: 50%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
 
-        input[type=submit] {
-            width: 50%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        label {
-            padding: 12px 12px 12px 0;
-            display: inline-block;
-        }
-
-        .error {
-            color: red;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <form action="register_user.php" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required><br>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Register">
-        </form>
-    </div>
-</body>
+    
+      <center><button type="submit" name="register">REGISTER</button><center>
+      <h5><center>Already have an account?<a href="kofie">Log in</a></h5>
+    </form>
+  </body>
 
 </html>
