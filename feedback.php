@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+     
+    <style>
+        /* Textarea 2 */
+
+        textarea {
+            width: 400px;
+            height: 300px;
+            padding: auto;
+            padding-bottom: 12px;
+            margin-left: auto;
+
+
+            font-family: Inter;
+            font-size: 40px;
+            line-height: 28px;
+            font-weight: 400;
+            color: #BCC1CAFF;
+            /* neutral-400 */
+            background: #FFFFFFFF;
+            /* white */
+            border-radius: 4px;
+            /* border-m */
+            border-width: 1px;
+            border-color: #9095A0FF;
+            /* neutral-500 */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #login {
+            width: 400px;
+            padding: 60px 60px;
+            height: 500px;
+            background-color: #fff;
+            margin: 15% auto;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input[type="textarea"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .checked {
+        color: orange;
+    }
+    </style>
+
+    
+</head>
+
+<body>
+    <form id="login" action="login_check.php" method="post">
+        <h1>Feedback</h1>
+
+        <label for="username"></label>
+        <textarea type="text" id="username" name="username" rows="1" cols="10"></textarea>
+        <button type="submit" name="login">Submit</button>
+    </form>
+
+    <span class="fa  fa-faster checked"></span>
+    <span class="fa  fa-faster checked"></span>
+    <span class="fa  fa-faster checked"></span>
+    <span claass="fa fa-star"></span>
+    <span claass="fa fa-star"></span>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
