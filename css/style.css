@@ -1,5 +1,5 @@
 body {
-  background-color: #21292a;
+  background-color: #2d3c3e;
 }
 /* Navbar */
 .navbar .container {
@@ -137,3 +137,26 @@ body {
 /* HomePage End*/
 
 /* Footer */
+.footer .container{
+  background-color: #a64f4f;
+}
+
+.footer .container .logo img{
+    width: 120px;
+}
+
+.footer .container .links {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.footer .container .links table tr td a
+{
+text-decoration: none;
+
+}
+
+.footer .container .links table  {
+width: 100%;
+background-color: #280000;
+}
