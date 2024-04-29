@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>Register</title>
-     
+    <title>Registergggg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* Textarea 2 */
 
@@ -74,8 +74,8 @@
         }
 
         .checked {
-        color: orange;
-    }
+            color: orange;
+        }
     </style>
 
     
@@ -84,25 +84,23 @@
 <body>
     <form id="login" action="login_check.php" method="post">
         <h1>Feedback</h1>
+        <br>
+        <textarea type="text" id="username" name="username" rows="5" cols="10"></textarea>
+        <br><br>
+        <center>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <br><br>
 
-        <label for="username"></label>
-        <textarea type="text" id="username" name="username" rows="1" cols="10"></textarea>
-        <button type="submit" name="login">Submit</button>
+        <button type="submit" name="login" >Submit</button>
+        </center>
+        
     </form>
 
-    <span class="fa  fa-faster checked"></span>
-    <span class="fa  fa-faster checked"></span>
-    <span class="fa  fa-faster checked"></span>
-    <span claass="fa fa-star"></span>
-    <span claass="fa fa-star"></span>
-
-
-
-
-
-
-
-
 </body>
+
 
 </html>
