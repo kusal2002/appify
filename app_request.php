@@ -4,56 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Request Page</title>
-    <style>
-        #rqform {
-            width: 400px;
-            height: 450px;
-            padding: 20px 50px;
-            background-color: #ffffff;
-            margin: 15% auto;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        }
-        h2{
-            margin: 0;
-            padding-bottom: 5%;
-            text-align: center;
-        }
-        .name{
-            display: flex;            
-        }
-        .text{
-            opacity: 1; 
-            border-radius: 5px; 
-            border-width: 1px; 
-            border-color: #00BDD6FF; /* primary-500 */
-            border-style: solid;
-            height: 22px;
-        }
-
-        #btn{
-            top: 498px; 
-            left: 1243px; 
-            width: 400px; 
-            height: 35px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-family: Inter; 
-            font-size: 14px; 
-            line-height: 22px; 
-            font-weight: 400; 
-            color: #00BDD6FF; /* primary-500 */
-            background: #EBFDFFFF; /* transparent */
-            opacity: 1; 
-            border-radius: 10px; 
-            border-width: 1px; 
-            border-color: #00BDD6FF; /* primary-500 */
-            border-style: solid; 
-        }
-        #btn:hover{
-            color: rgb(0, 0, 0);
-        }
-    </style>
+    <link rel="stylesheet" href="./css/app_request_style.css">
 </head>
 <body>
     <div id="rqform">
