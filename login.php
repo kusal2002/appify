@@ -1,3 +1,38 @@
+<?php
+session_start(); 
+
+require 'config.php';
+if(isset($_POST['submit']))
+{
+  $email = $_POST['useremail'];
+  $password = $_POST['password'];
+  $result = mysqli_query($conn, "SELECT * FROM registerd_user WHERE email = '$email' OR password = '$password'");
+  $row = mysqli_fetch_assoc($result);
+  if(mysqli_num_rows($result) > 0)  
+  {
+    if($password == $row['password'])
+    {
+      $_SESSION['login'] = true;
+      $_SESSION['id'] = $row["user_id"];
+      // echo "<script> alert('Login Successful'); </script>";  
+      header("location: index.php");
+      exit();
+    }
+
+    else{
+      echo
+      "<script> alert('Wrong Password'); </script>";
+    }
+  }  
+  else{
+    echo
+    "<script> alert('User Not Registered'); </script>";
+  }
+
+  
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -12,7 +47,7 @@
 </head>
 
 <body>
-  <form id="login" action="login_check.php" method="post">
+  <form id="login" method="POST" autocomplete="on">
     <h1>
       <center>Login
     </h1><br>
@@ -20,16 +55,16 @@
       <button type="submit">Publisher</button>
     </center><br><br>
     <lable>Email</lable>
-    <input type="text" id="email" name="email">
+    <input type="text" id="email" name="useremail">
     <lable>Password</lable>
     <input type="text" id="password" name="password"><br><br>
 
     <p><input type="checkbox" id="rememberme" name="rememberme">
       Remember me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="kofie">Forgot password?</a></p><br>
-    <center><button type="submit" name="register">LOGIN</button>
+    <center><button type="submit" name="submit">LOGIN</button>
       <center>
         <h5>
-          <center>Don't have an account?&nbsp;<a href="kofie">sign up</a>
+          <center>Don't have an account?&nbsp;<a href="./register.php">sign up</a>
         </h5>
   </form>
 </body>

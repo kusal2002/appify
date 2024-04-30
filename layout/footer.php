@@ -40,6 +40,6 @@
 
     </div>
     <div class="cren">
-        <h4>© 2024 Sliit group 7.2.</h4>
+        <h4>© 2024 Sliit MLB_07.02_09.</h4>
     </div>
 </div>
