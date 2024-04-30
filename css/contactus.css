@@ -1,0 +1,127 @@
+.full {
+           
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    
+    width: 50%;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.right {
+    
+    width: 50%;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.head {
+
+    position: absolute;
+    left: 200px;
+    font-family: Epilogue;
+    /* Heading */
+    font-size: 62px;
+    line-height: 82px;
+    font-weight: 400;
+    color: #171A1FFF;
+    /* neutral-900 */
+}
+
+.info {
+    position: absolute;
+    top: 190px;
+    left: 200px;
+    width: 308px;
+    height: 113px;
+}
+
+.form {
+    padding: 10% 10%
+}
+
+.image {
+    position: absolute;
+    top: 360px;
+    left: 200px;
+    width: 415px;
+    height: 150px;
+    border-radius: 0px;
+}
+
+.textbox {
+    width: 456px;
+    height: 44px;
+    padding-left: 0px;
+    padding-right: 16px;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    background: #48bad900;
+    /* transparent */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-width: 0px;
+    box-shadow: 0 1px 0 black;
+    outline: none;
+}
+
+.area {
+    width: 456px;
+    padding-left: 0px;
+    padding-right: 16px;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    background: #00000000;
+    /* transparent */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-width: 1px;
+    box-shadow: 0 1px 0 #9095a0;
+    outline: none;
+
+}
+
+.button {
+    width: 150px;
+    height: 30px;
+    padding: 0 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 100;
+    color: #171A1FFF;
+    background-color: white;
+    /* neutral-900 */
+    
+    /* transparent */
+    opacity: 1;
+    border-radius: 0px;
+    border-width: 1px;
+    
+    /* neutral-900 */
+    border-style: solid;
+}
+.line{
+    background-color: black;
+    width: 0.1%;
+    height: 20;
+    margin-right: ;
+}
+.space{
+    background-color: #ffffff;
+    width: 100%;
+    height: 60px;
+}
