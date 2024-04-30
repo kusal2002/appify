@@ -1,6 +1,8 @@
 .col {
     display: flex;
     flex-direction: row;
+    width: 100%; 
+    height: 300px
 }
 
 .hname,
@@ -15,3 +17,5 @@
     text-align: justify;
     padding-right: 10%;
 }
+
+
