@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Publish Page</title>
+        <title>Home Page</title>
         <style>
             .container{
                 background-color: rgb(174, 0, 255);
@@ -23,7 +23,7 @@
             }
 
             .right{  
-                background-color: yellow;
+                background-color: rgb(255, 255, 255);
                 width: 50%; 
                 height: 700px; 
                 float: right;
@@ -40,6 +40,11 @@
                 background-color: rgb(17, 0, 255);
                 width: 100%;
                 height: 350px;
+            }
+            .end{
+                background-color: rgb(255, 255, 255);
+                width: 100%;
+                height: 100px;
             }
             .text, #catogary, #description, #tags{
                 width: 65%;
@@ -95,7 +100,27 @@
                 border-style: solid; 
                 font-size:large;
             }
-            .Cbtn:hover,.btn:hover{
+            .ebtn{
+                top: 498px; 
+                left: 1243px; 
+                width: 150px; 
+                height: 35px; 
+                float: right; 
+                justify-content: center; 
+                font-family: Inter; 
+                font-size: 14px; 
+                line-height: 22px; 
+                font-weight: 400; 
+                color: rgb(255, 255, 255); /* primary-500 */
+                background: rgb(0, 0, 0); /* transparent */
+                opacity: 1; 
+                border-radius: 10px; 
+                border-width: 1px; 
+                border-color: rgb(255, 255, 255); /* primary-500 */
+                border-style: solid; 
+                font-size:large;
+            }
+            .Cbtn:hover,.btn:hover,.ebtn:hover{
                 color:rgb(0, 0, 0);
                 background-color: rgb(235, 234, 233);
             }
@@ -116,13 +141,7 @@
                 box-shadow: 0 1px 0 black;
                 outline: none;
             }
-            .lbl{
-                background-color: blueviolet;
-            }
             
-            .inputfile{
-                padding: 0; margin: 0; box-sizing: border-box;
-            }
         </style>
     </head>
     <body>
@@ -162,18 +181,19 @@
                 </div>
                 <div class="right">
                     <div class="uploadfile">
-                        <div class="lbl">
-                            <h2>Upload Files</h2>
-                        </div>
-                        <div>
-                            <input class="file" type="file" name="file" class="inputfile">
-                        </div>
-                        
+                        <h2 style="padding-left: 10%; padding-top: 5%;">Upload Files Here</h2>
+                         <input type="file" style="padding-left: 10%;">                       
                     </div>
                     <div class="addimage">
-                        
+                        <h2 style="padding-left: 10%; padding-top: 5%;">Add Imagess or Video</h2>
+                        <input type="file" style="padding-left: 10%;"> 
                     </div>
-                </div>            
+                    <div class="end">
+                        <button class="ebtn">Priview</button>
+                        <button class="ebtn">Publish</button>
+                    </div>   
+                </div>    
+                     
         </div>
 
 
