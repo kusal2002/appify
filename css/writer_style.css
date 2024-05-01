@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #dashboard {
+    background-color: lightblue;
+    padding: 10px;
+  }
+
+  .sign-out {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .users{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 300px;
+
+  }
+
+  .hederuser{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .apps{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 300px;
+  }
+
+
+
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+  }
+  
+  h1{
+    margin: 0;
+  }
+  /* Button 99 */
+  .button {
+    top: 348px; 
+    left: 1300px; 
+    height: 36px; 
+    padding: 0 12px; 
+    font-family: Inter; 
+    font-size: 14px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: #00BDD6FF; /* primary-500 */
+    background: #EBFDFFFF; /* primary-100 */
+    opacity: 1; 
+    border: none; 
+    border-radius: 4px; /* border-m */
+    
+  }
+  /* Hover */
+  .button:hover {
+    color: #00BDD6FF; /* primary-500 */
+    background: #A6F5FFFF; /* primary-200 */
+  }
+  /* Pressed */
+  .button:hover:active {
+    color: #00BDD6FF; /* primary-500 */
+    background: #61EDFFFF; /* primary-300 */
+  }
+  /* Disabled */
+  .button:disabled {
+    opacity: 0.4; 
+  }
+
+  .avtivebtn {
+    
+    top: 348px; 
+    left: 1300px; 
+    height: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: Inter; 
+    font-size: 20px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: rgb(63, 183, 107); /* primary-500 */
+    background: #EBFDFFFF; /* primary-100 */
+    opacity: 1; 
+    border: none; 
+    border-radius: 4px; /* border-m */
+  }
+  /* Hover */
+  .avtivebtn:hover {
+    color: rgb(255, 255, 255); /* primary-500 */
+    background: rgb(63, 183, 107); /* primary-200 */
+  }
+  /* create */
+  .iconpen {
+    
+    
+    fill: #9095A0FF; /* neutral-500 */
+  }
