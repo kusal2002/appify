@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 session_start();
 require 'config.php';
 if(!empty($_SESSION['id'])){
@@ -10,7 +10,7 @@ else{
     header("location: login.php");
     exit();
 }
-?> -->
+?>
 
 
 <!DOCTYPE html>
