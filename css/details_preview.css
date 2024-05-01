@@ -1,0 +1,143 @@
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 700px;
+    display: flex;
+    
+}
+.left{
+    background-color: rgb(255, 255, 255);
+    width: 65%;
+    height: 700px;
+}
+.right{
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    height: 700px;
+}
+.img1{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 400px;
+    margin: 10%;
+    margin-bottom: 0%;
+    margin-top: 4%;
+}
+.imgrow2{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 200px;
+    margin: 0%;
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+}
+.img2{
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 120px;
+    margin: 1%;
+}
+
+#bigimg{
+    width: 100%;
+    height: 400px;
+}
+
+#subimg{
+    width: 100%;
+    height: 120px;
+}
+       
+h5{
+    margin: 0%;
+    margin-top: 2%;
+}
+
+
+/* movie */
+#btndown,#submit{
+    top: 498px; 
+    left: 1243px; 
+    width: 200px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: Inter; 
+    font-size: 14px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: #00BDD6FF; /* primary-500 */
+    background: #EBFDFFFF; /* transparent */
+    opacity: 1; 
+    border-radius: 5px; 
+    border-width: 1px; 
+    border-color: #00BDD6FF; /* primary-500 */
+    border-style: solid; 
+    margin-right: 2%;
+}
+
+#btndown:hover,#submit:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(117, 206, 218);
+}
+#review{
+    width: 65%;
+    border-radius: 5px; 
+    border-width: 1px; 
+    border-color: rgb(255, 255, 255); /* primary-500 */
+    border-style: solid;
+    background-color: rgb(235, 234, 233);
+}
+.checked {
+    color: orange;
+}
+
+#btnq {
+    
+    padding: 18px 52.83px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: rgb(0, 0, 0); /* neutral-600 */
+    background: #EBFDFFFF; /* transparent */
+    border-color: #00BDD6FF;
+    border-radius: 10px; 
+    cursor: pointer; 
+    white-space: nowrap;
+    margin: 1px;
+    width: 25%; 
+    height: 10px;
+}
+
+#btnq:hover{
+    color: #00BDD6FF; /* primary-500 */
+    border-bottom: #00BDD6FF;
+}
+
+#btnq:active{
+    color: #00BDD6FF; /* primary-500 */
+    background: rgb(143, 220, 231); /* transparent */
+}
+
+/* book */
+.bookrow1{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 300px;
+    margin: 0%;
+    margin-left: 10%;
+    margin-top: 2%;
+    display: flex;
+}
+
+.bookp{
+    background-color:black ;
+    width: 100%;
+    margin: 1%;
+}
+
+#bookimg{
+    width: 100%; height:300px
+}
