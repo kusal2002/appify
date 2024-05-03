@@ -6,10 +6,10 @@ if(!empty($_SESSION['id'])){
     $result = mysqli_query($conn, "SELECT * FROM registerd_user WHERE user_id = $id");
     $row = mysqli_fetch_assoc($result);
 }
-else{
-    header("location: login.php");
-    exit();
-}
+// else{
+//     header("location: login.php");
+//     exit();
+// }
 ?>
 
 
@@ -25,7 +25,6 @@ else{
 
 <body>
     <?php include_once './layout/header.php' ?>
-    <h4>Welcome <?php echo $row["f_name"]; ?></h4>
 
     <div class="container">
         
@@ -42,54 +41,32 @@ else{
 
     </div>
     <div class="sampletabs">
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
+        <?php
+        $sql = "select * from apps";
+        $result = mysqli_query($conn, $sql);
+        $count = 0;
+        if ($result && mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                if ($count % 4 === 0 && $count !== 0) {
+                    echo '</div><div class="sampletabs">';
+                }
+                echo '<div class="card">';
+                echo '<a href="./books.php">';
+                echo '<div class="image">';
+                echo '  <img src="./Img/1.png" alt="">';
+                echo '  </div>';
+                echo '   <div class="container">';
+                echo "<h1><b>" . $row['app_name'] . "</b></h1>";
+                echo "<p>" . $row['category'] . "</p>";
+                echo '      </div>';
+                echo '  </a>';
+                echo '  </div>';
+                $count++;
 
+            }
+        }
 
-
-
+        ?>
     </div>
 
     <div class="container">
@@ -107,51 +84,32 @@ else{
     </div>
 
     <div class="sampletabs">
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="./books.php">
-                <div class="image">
-                    <img src="./Img/1.png" alt="">
-                </div>
-                <div class="container">
-                    <h4><b>WIFI</b></h4>
-                    <p>Sold</p>
-                </div>
-            </a>
-        </div>
+        <?php
+        $sql = "select * from movie";
+        $result = mysqli_query($conn, $sql);
+        $count = 0;
+        if ($result && mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                if ($count % 4 === 0 && $count !== 0) {
+                    echo '</div><div class="sampletabs">';
+                }
+                echo '<div class="card">';
+                echo '<a href="./books.php">';
+                echo '<div class="image">';
+                echo '  <img src="./Img/1.png" alt="">';
+                echo '  </div>';
+                echo '   <div class="container">';
+                echo "<h1><b>" . $row['title'] . "</b></h1>";
+                echo "<p>" . $row['category'] . "</p>";
+                echo '      </div>';
+                echo '  </a>';
+                echo '  </div>';
+                $count++;
 
+            }
+        }
+
+        ?>
     </div>
 
     </div>

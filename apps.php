@@ -40,7 +40,7 @@ include 'config.php';
                 echo '  <img src="./Img/1.png" alt="">';
                 echo '  </div>';
                 echo '   <div class="container">';
-                echo "<h4><b>" . $row['app_name'] . "</b></h4>";
+                echo "<h1><b>" . $row['app_name'] . "</b></h1>";
                 echo "<p>" . $row['category'] . "</p>";
                 echo '      </div>';
                 echo '  </a>';

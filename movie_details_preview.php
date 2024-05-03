@@ -6,9 +6,15 @@
     <title>Movie Details Preview</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/details_preview.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
-    <div class="container">
+
+<?php include_once './layout/header.php' ?>
+
+    <div class="containerr">
         <div class="left">
             <div class="img1">
                 <video id="bigimg"controls>
@@ -77,5 +83,8 @@
             <input id="submit" type="submit" value="Submit">
         </div>
     </div>
+
+    <?php include_once './layout/footer.php' ?>
+
 </body>
 </html>

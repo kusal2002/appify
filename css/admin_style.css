@@ -230,120 +230,249 @@ h1 {
   fill: #9095a0ff;
 }
 
-.containerrrr {
-  background-color: rgb(174, 0, 255);
-  width: 100%;
-  height: 700px;
-  display: flex;
-}
-.left {
-  background-color: rgb(255, 255, 255);
-  width: 50%;
-  height: 100vh;
-}
-.form {
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  padding-left: 15%;
-  padding-top: 10%;
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 20px 20px 0 0;
 }
 
-.right {
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  overflow: hidden;
+
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  height: 120vh;
+}
+
+/*publish_content start*/
+
+.containerrrr {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.containerrrr .left {
   background-color: rgb(255, 255, 255);
   width: 50%;
   height: 100vh;
+}
+.containerrrr .form {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding-top: 5%;
+  height: 100vh;
+}
+
+.containerrrr .right {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
   float: right;
+  align-items:center;
 }
 
 .uploadfile {
-  background-color: rgb(153, 38, 38);
   width: 100%;
-  height: 350px;
+  height: 30%;
 }
 
 .addimage {
-  background-color: rgb(17, 0, 255);
   width: 100%;
-  height: 350px;
+  height: 30%;
 }
+
 .end {
   background-color: rgb(255, 255, 255);
   width: 100%;
-  height: 100px;
+  height: 30%;
 }
+
 .text,
-#catogary,
 #description,
 #tags {
-  width: 65%;
-  height: 25px;
+  width: 90%;
+  height: 50px;
   border-radius: 5px;
   border-width: 1px;
   border-color: rgb(255, 255, 255); /* primary-500 */
   border-style: solid;
   background-color: rgb(235, 234, 233);
+  font-size: large;
 }
-#discForTags {
-  color: rgb(155, 155, 155);
+#catogary {
+  width: 91%;
+  height: 50px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255); /* primary-500 */
+  border-style: solid;
+  background-color: rgb(235, 234, 233);
+  font-size: large;
 }
 
-.Cbtn {
-  top: 498px;
-  left: 1243px;
-  width: 165px;
-  height: 35px;
+/*radio buttons start free/paid*/
+.wrapper {
+  display: inline-flex;
+  height: 30px;
+  width: 91%;
   align-items: center;
-  justify-content: center;
-  font-family: Inter;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400px;
-  color: rgb(255, 255, 255); /* primary-500 */
-  background: rgb(0, 0, 0); /* transparent */
-  opacity: 1;
-  border-radius: 10px;
-  border-width: 0px;
-  border-color: rgb(255, 255, 255); /* primary-500 */
-  border-style: solid;
-  font-size: large;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 10px 0 0 0;
 }
-.btn {
-  top: 498px;
-  left: 1243px;
-  width: 150px;
-  height: 35px;
+.wrapper .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: Inter;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
-  color: rgb(255, 255, 255); /* primary-500 */
-  background: rgb(0, 0, 0); /* transparent */
+  justify-content: space-evenly;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #00bdd6;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"] {
+  display: none;
+}
+
+/* app */
+#app-option-1:checked:checked ~ .app-option-1,
+#app-option-2:checked:checked ~ .app-option-2 {
+  border-color: #00bdd6;
+  background: #00bdd6;
+}
+#app-option-1:checked:checked ~ .app-option-1 .dot,
+#app-option-2:checked:checked ~ .app-option-2 .dot {
+  background: #fff;
+}
+#app-option-1:checked:checked ~ .app-option-1 .dot::before,
+#app-option-2:checked:checked ~ .app-option-2 .dot::before {
   opacity: 1;
-  border-radius: 10px;
+  transform: scale(1);
+}
+
+
+
+
+
+/* movie */
+#movie-option-1:checked:checked ~ .movie-option-1,
+#movie-option-2:checked:checked ~ .movie-option-2 {
+  border-color: #00bdd6;
+  background: #00bdd6;
+}
+#movie-option-1:checked:checked ~ .movie-option-1 .dot,
+#movie-option-2:checked:checked ~ .movie-option-2 .dot {
+  background: #fff;
+}
+#movie-option-1:checked:checked ~ .movie-option-1 .dot::before,
+#movie-option-2:checked:checked ~ .movie-option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+
+.wrapper .option span {
+  font-size: 20px;
+  color: #808080;
+}
+
+
+/* app */
+#app-option-1:checked:checked ~ .app-option-1 span,
+#app-option-2:checked:checked ~ .app-option-2 span {
+  color: #fff;
+}
+
+
+/* movie */
+
+#movie-option-1:checked:checked ~ .movie-option-1 span,
+#movie-option-2:checked:checked ~ .movie-option-2 span {
+  color: #fff;
+}
+/*radio buttons start free/paid*/
+
+#price {
+  width: 300px;
+  height: 44px;
+
+  border-radius: 5px;
   border-width: 1px;
   border-color: rgb(255, 255, 255); /* primary-500 */
   border-style: solid;
+  background-color: rgb(235, 234, 233);
   font-size: large;
 }
+
 .ebtn {
-  top: 498px;
-  left: 1243px;
-  width: 150px;
+  width: 90%;
   height: 35px;
-  float: right;
   justify-content: center;
   font-family: Inter;
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
-  color: rgb(255, 255, 255); /* primary-500 */
-  background: rgb(0, 0, 0); /* transparent */
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   opacity: 1;
   border-radius: 10px;
   border-width: 1px;
-  border-color: rgb(255, 255, 255); /* primary-500 */
+  border-color: rgb(255, 255, 255);
   border-style: solid;
   font-size: large;
 }
@@ -351,8 +480,10 @@ h1 {
 .btn:hover,
 .ebtn:hover {
   color: rgb(0, 0, 0);
-  background-color: rgb(235, 234, 233);
+  background-color: #00bdd6;
+  cursor: pointer;
 }
+
 #price {
   width: 290px;
   height: 44px;
@@ -363,10 +494,11 @@ h1 {
   line-height: 26px;
   font-weight: 400;
   background: #48bad900;
-  /* transparent */
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-width: 0px;
   box-shadow: 0 1px 0 black;
   outline: none;
 }
+
+/*publish_content end*/
