@@ -94,7 +94,7 @@ if (isset($_POST['submit1'])) {
             <button class="tablinks" onclick="openCity(event, 'App')">App</button>
             <button class="tablinks" onclick="openCity(event, 'Movie')">Movie</button>
             <button class="tablinks" onclick="openCity(event, 'Book')">Book</button>
-        </div>
+        </div
 
         <!-- Tab content -->
         <div id="App" class="tabcontent">
@@ -248,15 +248,24 @@ if (isset($_POST['submit1'])) {
                         <form method="post">
                             <label><b style="font-size: 15px">Book Name :</b></label><br>
                             <input class="text" type="text" name="appname"><br><br>
+                            <label><b style="font-size: 15px">Year :</b></label><br>
+                            <input class="text" type="text" name="year"><br><br>
+                            <label><b style="font-size: 15px">Genre :</b></label><br>
+                            <input class="text" type="text" name="genre"><br><br>
+                            <label><b style="font-size: 15px">Author :</b></label><br>
+                            <input class="text" type="text" name="Author"><br><br>
 
-                            <label><b style="font-size: 15px">Choose Catogary :</b></label><br>
-                            <select id="catogary" name="appcatogary">
+                            <label><b style="font-size: 15px">Choose Language :</b></label><br>
+                            <select id="catogary" name="languagecatogary">
                                 <option selected disabled>Choose Catogary </option>
-                                <option value="Games">Games</option>
-                                <option value="Entertainment">Entertainment</option>
-                                <option value="Education">Education</option>
-                                <option value="Helth">Helth</option>
+                                <option value="English">English</option>
+                                <option value="Sinhala">Sinhala</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Malayalam">Malayalam</option>
                             </select><br><br>
+
+                            <label><b style="font-size: 15px">Pages :</b></label><br>
+                            <input class="text" type="text" name="Pages"><br><br>
 
                             <label><b style="font-size: 15px">Description :</b></label><br>
                             <textarea name="description" id="description" cols="30" rows="2"></textarea><br><br>
@@ -264,13 +273,13 @@ if (isset($_POST['submit1'])) {
 
                             <label><b style="font-size: 15px">Price :</b></label><br>
                             <div class="wrapper">
-                                <input type="radio" name="price" value="Free" id="option-1" checked>
-                                <input type="radio" name="price" value="Paid" id="option-2">
-                                <label for="option-1" class="option option-1">
+                                <input type="radio" name="bookprice" value="Free" id="book-option-1" checked>
+                                <input type="radio" name="bookprice" value="Paid" id="book-option-2">
+                                <label for="book-option-1" class="option book-option-1">
                                     <div class="dot"></div>
                                     <span>Free</span>
                                 </label>
-                                <label for="option-2" class="option option-2">
+                                <label for="book-option-2" class="option book-option-2">
                                     <div class="dot"></div>
                                     <span>Paid</span>
                                 </label>

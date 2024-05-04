@@ -266,7 +266,7 @@ h1 {
 
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-top: none;
   border-radius: 0 0 20px 20px;
   height: 120vh;
@@ -423,6 +423,22 @@ input[type="radio"] {
 }
 
 
+/* book */
+#book-option-1:checked:checked ~ .book-option-1,
+#book-option-2:checked:checked ~ .book-option-2 {
+  border-color: #00bdd6;
+  background: #00bdd6;
+}
+#book-option-1:checked:checked ~ .book-option-1 .dot,
+#book-option-2:checked:checked ~ .book-option-2 .dot {
+  background: #fff;
+}
+#book-option-1:checked:checked ~ .book-option-1 .dot::before,
+#book-option-2:checked:checked ~ .book-option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 
 
@@ -445,6 +461,14 @@ input[type="radio"] {
 #movie-option-2:checked:checked ~ .movie-option-2 span {
   color: #fff;
 }
+
+/* book */
+
+#book-option-1:checked:checked ~ .book-option-1 span,
+#book-option-2:checked:checked ~ .book-option-2 span {
+  color: #fff;
+}
+
 /*radio buttons start free/paid*/
 
 #price {
