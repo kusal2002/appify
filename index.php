@@ -3,7 +3,7 @@ session_start();
 require 'config.php';
 if(!empty($_SESSION['id'])){
     $id = $_SESSION["id"];
-    $result = mysqli_query($conn, "SELECT * FROM registerd_user WHERE user_id = $id");
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $id");
     $row = mysqli_fetch_assoc($result);
 }
 // else{
@@ -53,7 +53,7 @@ if(!empty($_SESSION['id'])){
                 echo '<div class="card">';
                 echo '<a href="./books.php">';
                 echo '<div class="image">';
-                echo '  <img src="./Img/1.png" alt="">';
+                echo '<img src="./uploads' . $row['app_profile_img'] . '" alt="">';
                 echo '  </div>';
                 echo '   <div class="container">';
                 echo "<h1><b>" . $row['app_name'] . "</b></h1>";

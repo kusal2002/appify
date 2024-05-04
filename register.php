@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
   $email = $_POST['email'];
   $password = $_POST['password'];
   $cpassword = $_POST['cpassword'];
-  $duplicate = mysqli_query($conn, "SELECT * FROM `registerd_user` WHERE email = '$email' OR f_name = '$fname'");
+  $duplicate = mysqli_query($conn, "SELECT * FROM `user` WHERE email = '$email' OR f_name = '$fname'");
   if(mysqli_num_rows($duplicate) > 0)
   {
     echo "
@@ -17,7 +17,7 @@ if(isset($_POST['submit']))
   else{
     if($password == $cpassword)
     {
-      $query = "INSERT INTO `registerd_user` (f_name, l_name, email, password) VALUES('$fname', '$lname', '$email', '$password')";
+      $query = "INSERT INTO `user` (f_name, l_name, email, password) VALUES('$fname', '$lname', '$email', '$password')";
       mysqli_query($conn, $query);
       echo "<script> alert('Registration Successful'); </script>";
       
