@@ -21,8 +21,8 @@ if (isset($_POST['submit1'])) {
     $file_tmp = $_FILES['file']['tmp_name'];
     move_uploaded_file($file_tmp, "../uploads/files/$file");
 
-    $image_path = "../uploads/images/$image";
-    $file_path = "../uploads/files/$file";
+    $image_path = "./images/$image";
+    $file_path = "./files/$file";
 
     $sql = "INSERT INTO apps (app_name, category, app_description, price, upload_files, app_profile_img) VALUES ('$appname', '$appcatogary', '$appdescription', '$appPrice','$file_path','$image_path')";
     $result = mysqli_query($conn, $sql);
@@ -55,8 +55,8 @@ if (isset($_POST['submit1'])) {
     $file_tmp = $_FILES['file']['tmp_name'];
     move_uploaded_file($file_tmp, "../uploads/files/$file");
 
-    $image_path = "../uploads/images/$image";
-    $file_path = "../uploads/files/$file";
+    $image_path = "./images/$image";
+    $file_path = "./files/$file";
 
     $sql = "INSERT INTO movie (title, category, movie_description, price, upload_files,image_1,year,video,cast) VALUES ('$moviename', '$moviecatogary', '$moviedescription', '$movieprice','$file_path','$image_path','$movieyear','$videolink','$director')";
     $result = mysqli_query($conn, $sql);
