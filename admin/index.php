@@ -66,7 +66,7 @@
                 <td>US</td>
                 <td>10/07/2023</td>
                 <td><button class="avtivebtn">Active</button></td>
-                <td><img src="/Img/icons/pen.svg" id="iconpen"></td>
+                <td><img src="Img\icons\pen.svg" id="iconpen"></td>
               </tr>
             </table>
           </div>
@@ -92,7 +92,6 @@
                 <td><button class="avtivebtn">Active</button></td>
                 <td><img src="/Img/icons/pen.svg" id="iconpen"></td>
               </tr>
-
             </table>
 
           </div>
