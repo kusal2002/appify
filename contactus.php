@@ -32,11 +32,15 @@
         <div class="line"></div>
         <div class="right">
             <form action="" class="form">
-                <input type="text" placeholder="Your Name" class="textbox"><br><br>
-                <input type="text" placeholder="Your Email" class="textbox"><br><br>
-                <input type="text" placeholder="your Phone Number" class="textbox"><br><br>
-                <textarea class="area" id="" cols="30" rows="10" placeholder="Your Message"></textarea> <br><br>
-                <input type="submit" class="button" value="Send Message">
+                <lable>Name</lable><br>
+                <input type=text size="60"><br>
+                <lable>Email</lable><br>
+                <input type=text size="60"><br>
+                <lable>Contact No</lable><br>
+                <input type=text size="60"><br><br>
+                <lable>Your Message</lable><br>
+                <textarea cols="60" rows="10"></textarea><br><br>
+                <button>Send Message</button>
             </form>
 
         </div>
