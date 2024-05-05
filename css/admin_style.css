@@ -298,6 +298,8 @@ h1 {
   height: 100vh;
   float: right;
   align-items:center;
+  width: 50%;
+  
 }
 
 .uploadfile {
