@@ -6,10 +6,11 @@ if(isset($_POST['submit']))
 {
   $email = $_POST['useremail'];
   $password = $_POST['password'];
-  $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' OR password = '$password'");
-  $row = mysqli_fetch_assoc($result);
+  $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
   if(mysqli_num_rows($result) > 0)  
   {
+  $row = mysqli_fetch_assoc($result);
+
     if($password == $row['password'])
     {
       $_SESSION['login'] = true;
@@ -70,3 +71,4 @@ if(isset($_POST['submit']))
 </body>
 
 </html>
+
