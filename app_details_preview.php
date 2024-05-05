@@ -43,8 +43,9 @@ require 'config.php';
         </div>
         <div class="right">
             <?php
-            $sql = "select * from apps where `app_id` = $_GET[id]";
             require 'config.php';
+            $sql = "select * from apps where `app_id` = $_GET[id]";
+
 
             $result = mysqli_query($conn, $sql);
             if ($result) {
@@ -72,21 +73,18 @@ require 'config.php';
                                 style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
                         <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
                     </div>
-                    <p style="text-align: justify; padding-right: 40%;">'. $appdescription.'</p>
+                    <p style="text-align: justify; padding-right: 40%;">' . $appdescription . '</p>
                     <h4 style="margin: 0;">Write a review ✍️</h4>
                     <textarea name="review" id="review" cols="45" rows="8"></textarea>
                     <input id="submit" type="submit" value="Submit">
-                </div>
-';
-
+                </div>';
                 }
-
             }
             ?>
 
-    </div>
+        </div>
 
-    <?php include_once './layout/footer.php' ?>
+        <?php include_once './layout/footer.php' ?>
 
 </body>
 
