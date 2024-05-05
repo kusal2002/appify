@@ -1,9 +1,9 @@
 <?php
 session_start();
 require 'config.php';
-if(!empty($_SESSION['id'])){
-    $id = $_SESSION["id"];
-    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $id");
+if(!empty($_SESSION['sessionid'])){
+    $sessionid = $_SESSION["sessionid"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
     $row = mysqli_fetch_assoc($result);
 }
 // else{
@@ -44,14 +44,15 @@ if(!empty($_SESSION['id'])){
         <?php
         $sql = "select * from apps";
         $result = mysqli_query($conn, $sql);
-        $count = 0;
         if ($result && mysqli_num_rows($result) > 0) {
+            $count = 0;
             while ($row = mysqli_fetch_assoc($result)) {
                 if ($count % 4 === 0 && $count !== 0) {
                     echo '</div><div class="sampletabs">';
                 }
+                $app_id = $row['app_id'];
                 echo '<div class="card">';
-                echo '<a href="./books.php">';
+                echo '<a href="app_details_preview.php?id='.$app_id.'">';
                 echo '<div class="image">';
                 echo '<img src="./uploads' . $row['app_profile_img'] . '" alt="">';
                 echo '  </div>';
@@ -96,7 +97,7 @@ if(!empty($_SESSION['id'])){
                 echo '<div class="card">';
                 echo '<a href="./books.php">';
                 echo '<div class="image">';
-                echo '  <img src="./Img/1.png" alt="">';
+                echo '<img src="./uploads' . $row['image_1'] . '" alt="">';
                 echo '  </div>';
                 echo '   <div class="container">';
                 echo "<h1><b>" . $row['title'] . "</b></h1>";
