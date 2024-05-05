@@ -62,17 +62,15 @@ if(isset($_POST['submit']))
 </head>
 
 <body>
-  <form id="login" method="POST" autocomplete="on">
     <h1>
       <center>Login
-    </h1><br>
-    <center><button type="submit">User&nbsp;</button>
-      <button type="submit">Publisher</button>
-    </center><br><br>
+    </h1>
+  <form id="login" method="POST" autocomplete="on">
+   <br><br>
     <lable>Email</lable>
-    <input type="text" id="email" name="useremail">
+    <input type="text" class="text" id="email" name="useremail">
     <lable>Password</lable>
-    <input type="text" id="password" name="password"><br><br>
+    <input type="text" class="text"  id="password" name="password"><br><br>
 
     <p><input type="checkbox" id="rememberme" name="rememberme">
       Remember me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="kofie">Forgot password?</a></p><br>
