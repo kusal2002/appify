@@ -40,7 +40,7 @@ require '.././config.php';
         </ul>
         <ul>
             <label>Apps</label>
-            <li>CREATE BLOG</li>
+            <li><a href="blog_create.php">CREATE BLOG</a></li>
             <li><a href="./manage_blog.php">MANAGE BLOG</a></li>
 
         </ul>
