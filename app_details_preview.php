@@ -23,23 +23,38 @@ require 'config.php';
     <div class="apppreviewcontainer">
 
         <div class="left">
-            <div class="img1">
-                <img id="bigimg" src="./Img/appify.png" alt="">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://th.bing.com/th/id/OIP.f7Odb8ieZQTrfQ4H7FYYGAHaGl?rs=1&pid=ImgDetMain" style="height:500px; width:600px" />
+                    <div class="text">Picture 01</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://inspirationfeed.com/wp-content/uploads/2020/05/Funny-Good-Morning-Meme-43.jpeg" style="height:500px; width:600px" />
+                    <div class="text">Picture 02</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://i.redd.it/jzhf0sirfbu21.png" style="height:500px; width:600px" />
+                    <div class="text">Picture 03</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="imgrow2">
-                <div class="img2">
-                    <img id="subimg" src="./Img/appify.png" alt="">
-                </div>
-                <div class="img2">
-                    <img id="subimg" src="./Img/appify.png" alt="">
-                </div>
-                <div class="img2">
-                    <img id="subimg" src="./Img/appify.png" alt="">
-                </div>
-                <div class="img2">
-                    <img id="subimg" src="./Img/appify.png" alt="">
-                </div>
+            <br>
+
+            <!-- The dots -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
+
         </div>
         <div class="right">
             <?php
@@ -73,7 +88,7 @@ require 'config.php';
                                 style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
                         <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
                     </div>
-                    <p style="text-align: justify; padding-right: 40%;">' . $appdescription . '</p>
+                    <p style="text-align: justify; padding-right: 40%;"><br>' . $appdescription . '<br><br></p>
                     <h4 style="margin: 0;">Write a review ✍️</h4>
                     <textarea name="review" id="review" cols="45" rows="8"></textarea>
                     <input id="submit" type="submit" value="Submit">
@@ -85,6 +100,41 @@ require 'config.php';
         </div>
 
         <?php include_once './layout/footer.php' ?>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
 
 </body>
 
