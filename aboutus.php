@@ -10,15 +10,15 @@
 <body>
 
 <?php include_once './layout/header.php' ?>
-
-    <h1 style="color: black; font-size: 50px; text-align: center; margin: 0%; padding: 0%;">About Us</h1>
+<div class="aboutuscontainer" style="margin-bottom : 50px; padding:20px">
+    <h1 class="heading">About Us </h1>
     <div style=" width: 100%; height: 800px;">
-        <div class="col" style="width: 100%; height: 400px;">
+        <div class="col1">
             <div style=" width: 66.66%; height: 500px;">
                 <img src="./img/about.jpeg" style=" width: 80%; height: 500px; padding-left: 10%; padding-right: 10%;">
             </div>
             <div style="width:33.33%; height: 500px;">
-                <p style="padding-left: 10%;padding-right: 10%;font-size: xx-large;">Welcome to our online app store
+                <p style="padding-left: 10%;padding-right: 10%;  font-size: xx-large; ">Welcome to our online app store
                     called "Appify". Our platform offers a wide range of apps, games, movies, and ebooks for users to
                     explore and enjoy. Whether you're looking for the latest mobile apps, popular games, blockbuster
                     movies, or captivating ebooks, our app store has something for everyone.
@@ -67,9 +67,11 @@
             </div>
         </div>
     </div>
-    <?php include_once './layout/footer.php' ?>
-
-
+   
+   
+    
+</div>
+<?php include_once './layout/footer.php' ?>
 
 </body>
 
