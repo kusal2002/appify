@@ -486,6 +486,7 @@ input[type="radio"] {
 .ebtn {
   width: 90%;
   height: 35px;
+  padding-left: 10%;
   justify-content: center;
   font-family: Inter;
   font-size: 14px;
