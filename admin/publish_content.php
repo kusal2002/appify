@@ -94,7 +94,7 @@ if (isset($_POST['submit1'])) {
             <button class="tablinks" onclick="openCity(event, 'App')">App</button>
             <button class="tablinks" onclick="openCity(event, 'Movie')">Movie</button>
             <button class="tablinks" onclick="openCity(event, 'Book')">Book</button>
-        </div
+        </div>
 
         <!-- Tab content -->
         <div id="App" class="tabcontent">
@@ -143,12 +143,12 @@ if (isset($_POST['submit1'])) {
                     </div>
                     <div class="right">
                         <div class="uploadfile">
-                            <h2 style="padding-top: 5%;">Upload Files Here</h2>
-                            <input type="file" name="file"><br><br>
+                            <h2 style="padding-left: 10%; padding-top: 5%;">Upload Files Here</h2>
+                            <input type="file" name="file" style="padding-left: 10%;"><br><br>
                         </div>
                         <div class="addimage">
-                            <h2 style=" padding-top: 5%;">Add Images or Video</h2>
-                            <input type="file" name="image"><br><br>
+                            <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
+                            <input type="file" name="image" style="padding-left: 10%;"><br><br>
                         </div>
                         <div class="end">
                             <!-- <button class="ebtn">Priview</button> -->
@@ -221,12 +221,12 @@ if (isset($_POST['submit1'])) {
                     </div>
                     <div class="right">
                         <div class="uploadfile">
-                            <h2 style="padding-top: 5%;">Upload Files Here</h2>
-                            <input type="file" name="file"><br><br>
+                            <h2 style="padding-left: 10%; padding-top: 5%;">Upload Files Here</h2>
+                            <input type="file" name="file" style="padding-left: 10%;"><br><br>
                         </div>
                         <div class="addimage">
-                            <h2 style=" padding-top: 5%;">Add Images or Video</h2>
-                            <input type="file" name="image"><br><br>
+                            <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
+                            <input type="file" name="image" style="padding-left: 10%;"><br><br>
                         </div>
                         <div class="end">
                             <!-- <button class="ebtn">Priview</button> -->

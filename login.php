@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
     if($password == $row['password'])
     {
       $_SESSION['login'] = true;
-      $_SESSION['id'] = $row["user_id"];
+      $_SESSION['sessionid'] = $row["user_id"];
       // echo "<script> alert('Login Successful'); </script>";  
       header("location: index.php");
       exit();
