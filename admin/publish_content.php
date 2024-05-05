@@ -148,8 +148,10 @@ if (isset($_POST['submit1'])) {
                         </div>
                         <div class="addimage">
                             <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
-                            <input type="file" name="file" style="padding-left: 10%;"><br><br>
-                        </div>
+                            <input type="file" name="file1" style="padding-left: 10%;"><br><br>
+                            <input type="file" name="file2" style="padding-left: 10%;"><br><br>
+                            <input type="file" name="file3" style="padding-left: 10%;"><br><br>
+                        </div><br><br><br><br>
                         <div class="end">
                             <!-- <button class="ebtn">Priview</button> -->
                             <!-- <button type="submit" class="ebtn">Publish</button> -->
@@ -226,8 +228,10 @@ if (isset($_POST['submit1'])) {
                         </div>
                         <div class="addimage">
                             <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
-                            <input type="file" name="image" style="padding-left: 10%;"><br><br>
-                        </div>
+                            <input type="file" name="image1" style="padding-left: 10%;"><br><br>
+                            <input type="file" name="image2" style="padding-left: 10%;"><br><br>
+                            <input type="file" name="image3" style="padding-left: 10%;"><br><br>
+                        </div><br><br><br><br>
                         <div class="end">
                             <!-- <button class="ebtn">Priview</button> -->
                             <!-- <button type="submit" class="ebtn">Publish</button> -->
@@ -240,6 +244,8 @@ if (isset($_POST['submit1'])) {
 
             </form>
         </div>
+
+        <!-- Books -->
 
         <div id="Book" class="tabcontent">
             <div class="containerrrr">
@@ -301,8 +307,10 @@ if (isset($_POST['submit1'])) {
                     </div>
                     <div class="addimage">
                         <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
-                        <input type="file" style="padding-left: 10%;">
-                    </div>
+                        <input type="file" name="file1" style="padding-left: 10%;"><br><br>
+                        <input type="file" name="file2" style="padding-left: 10%;"><br><br>
+                        <input type="file" name="file3" style="padding-left: 10%;"><br><br>
+                    </div><br><br><br><br>
                     <div class="end">
                         <!-- <button class="ebtn">Priview</button> -->
                         <button class="ebtn">Publish</button>
