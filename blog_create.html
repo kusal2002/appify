@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/blog_create.css" />
+</head>
+
+<body>
+    <div id="blog" class="tabcontent">
+        <form method="post" enctype="multipart/form-data">
+            <div class="containerrrr">
+                <div class="left">
+                    <div class="form">
+                        <label><b style="font-size: 15px">Blog Title :</b></label><br />
+                        <input class="text" type="text" name="moviename" /><br /><br />
+
+                        <label><b style="font-size: 15px">Choose Catogary :</b> </label><br />
+                        <select id="catogary" name="moviecatogary">
+                            <option selected disabled>Choose Catogary</option>
+                            <option value="Games">Tech</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Education">Education</option>
+                            <option value="Helth">Helth</option>
+                            <option value="Helth">Lifestyle</option>
+                        </select>
+                        <br /><br />
+
+                        <label><b style="font-size: 15px">Content :</b></label><br />
+                        <input class="text" type="text" name="content" /><br /><br />
+
+                        <label><b style="font-size: 15px">Description :</b></label><br />
+                        <textarea name="blogdescription" id="description" cols="30" rows="2"></textarea><br /><br />
+
+                        <label><b style="font-size: 15px">Add Image :</b></label>
+                        <input type="file" name="image"/><br /><br />    
+
+                        <button type="submit2" name="submit2" class="ebtn">
+                            Publish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
