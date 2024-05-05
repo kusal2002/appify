@@ -44,7 +44,7 @@
   }
   
   .text,
-  #description,
+  #content,
   #tags {
     width: 90%;
     height: 50px;
@@ -150,7 +150,7 @@
   input[type="file"]::file-selector-button{
     border-radius: 4px;
     height: 30px;
-    width: 100%;
+    width: 50%;
     cursor: pointer;
     background-color: white;
     border: 2px solid;
@@ -164,4 +164,5 @@
   
   input[type="file"]::file-selector-button:active{
     background-color: #e5e7eb;
+    
   } 
