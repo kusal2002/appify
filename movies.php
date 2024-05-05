@@ -44,8 +44,9 @@ if(!empty($_SESSION['id'])){
                 if ($count % 4 === 0 && $count !== 0) {
                     echo '</div><div class="sampletabs">';
                 }
+                
                 echo '<div class="card">';
-                echo '<a href="./books.php">';
+                echo '<a href="./movie_details_preview.php">';
                 echo '<div class="image">';
                 echo '  <img src="./Img/1.png" alt="">';
                 echo '  </div>';
