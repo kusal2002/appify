@@ -3,10 +3,14 @@
 
 <head>
     <title>About US</title>
-    <link rel="stylesheet" href="./css/about_style.css">       
+    <link rel="stylesheet" href="./css/about_style.css">   
+    <link rel="stylesheet" href="./css/style.css">    
 </head>
 
 <body>
+
+<?php include_once './layout/header.php' ?>
+
     <h1 style="color: black; font-size: 50px; text-align: center; margin: 0%; padding: 0%;">About Us</h1>
     <div style=" width: 100%; height: 800px;">
         <div class="col" style="width: 100%; height: 400px;">
@@ -63,6 +67,7 @@
             </div>
         </div>
     </div>
+    <?php include_once './layout/footer.php' ?>
 
 
 

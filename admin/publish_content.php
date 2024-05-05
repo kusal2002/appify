@@ -28,7 +28,6 @@ if (isset($_POST['submit1'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
-
     } else {
         die(mysqli_error($conn));
     }
@@ -43,7 +42,7 @@ if (isset($_POST['submit1'])) {
     $director = $_POST['moviecast'];
     $moviecatogary = $_POST['moviecatogary'];
     $movieprice = $_POST['movieprice'];
-    
+
 
     //image upload
     $image = $_FILES['image']['name'];
@@ -62,7 +61,39 @@ if (isset($_POST['submit1'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
+    } else {
+        die(mysqli_error($conn));
+    }
+} else if (isset($_POST['submit3'])) {
+    //book details
+    $bookname = $_POST['bookname'];
+    $year = $_POST['year'];
+    // $movierating = $_POST['movierating'];
+    $genre = $_POST['genre'];
+    $Author = $_POST['Author'];
+    $languagecatogary = $_POST['languagecatogary'];
+    $Pages = $_POST['Pages'];
+    $description = $_POST['description'];
+    $bookprice = $_POST['bookprice'];
 
+
+    //image upload
+    $image = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
+    move_uploaded_file($image_tmp, "../uploads/images/$image");
+
+    //file upload
+    $file = $_FILES['file']['name'];
+    $file_tmp = $_FILES['file']['tmp_name'];
+    move_uploaded_file($file_tmp, "../uploads/files/$file");
+
+    $image_path = "./images/$image";
+    $file_path = "./files/$file";
+
+    $sql = "INSERT INTO book (book_name,book_description,language,author,genre,year,pages,upload_file,image_1) VALUES ('$bookname', '$year', '$genre', '$Author','$languagecatogary','$Pages','$bookprice','$file_path','$image_path')";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        echo '<script>alert("Data inserted successfully")</script>';
     } else {
         die(mysqli_error($conn));
     }
@@ -248,12 +279,13 @@ if (isset($_POST['submit1'])) {
         <!-- Books -->
 
         <div id="Book" class="tabcontent">
-            <div class="containerrrr">
-                <div class="left">
-                    <div class="form">
-                        <form method="post">
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="containerrrr">
+                    <div class="left">
+                        <div class="form">
                             <label><b style="font-size: 15px">Book Name :</b></label><br>
-                            <input class="text" type="text" name="appname"><br><br>
+                            <input class="text" type="text" name="bookname"><br><br>
                             <label><b style="font-size: 15px">Year :</b></label><br>
                             <input class="text" type="text" name="year"><br><br>
                             <label><b style="font-size: 15px">Genre :</b></label><br>
@@ -297,7 +329,7 @@ if (isset($_POST['submit1'])) {
                             <label for="terms">I Consent To The Privacy Policy & Terms And Conitions Privacy
                                 Policy.</label>
 
-                        </form>
+                        </div>
                     </div>
                 </div>
                 <div class="right">
@@ -317,8 +349,8 @@ if (isset($_POST['submit1'])) {
                     </div>
                 </div>
 
-            </div>
         </div>
+    </div>
 
 
     </div>

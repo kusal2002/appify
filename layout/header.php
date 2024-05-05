@@ -1,3 +1,16 @@
+<?php
+if (!empty($_SESSION['sessionid'])) {
+    $sessionid = $_SESSION["sessionid"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+    }
+}
+?>
+
+
+
+
 <div class="navbar">
     <div class="container">
         <div class="logo">
@@ -19,15 +32,15 @@
         </div>
 
         <div class="auth">
-            <?php if (!empty($_SESSION['id'])): ?>
+            <?php if (!empty($_SESSION['sessionid'])): ?>
                 <h2 style="color:#00bdd6">Welcome <?php echo $row["f_name"]; ?></h2>
                 <button class="logoutbtn"><a href="logout.php">logout</a></button>
 
             <?php endif; ?>
 
-            <?php if (empty($_SESSION['id'])): ?>
+            <?php if (empty($_SESSION['sessionid'])): ?>
                 <button><a href="login.php">Login</a></button>
-                <button><a href=" register.php">Register</a></button>
+                <button><a href="register.php">Register</a></button>
 
             <?php endif; ?>
         </div>

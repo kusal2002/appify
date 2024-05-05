@@ -20,5 +20,5 @@
 
         </ul>
 
-        <button class="logout-btn">Logout</button>
+        <button class="logout-btn"><a href="../logout.php">Logout</a></button>
     </div>

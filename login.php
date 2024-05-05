@@ -6,17 +6,32 @@ if(isset($_POST['submit']))
 {
   $email = $_POST['useremail'];
   $password = $_POST['password'];
-  $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' OR password = '$password'");
-  $row = mysqli_fetch_assoc($result);
+  $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
   if(mysqli_num_rows($result) > 0)  
   {
+  $row = mysqli_fetch_assoc($result);
+
     if($password == $row['password'])
     {
       $_SESSION['login'] = true;
-      $_SESSION['id'] = $row["user_id"];
+      $_SESSION['sessionid'] = $row["user_id"];
       // echo "<script> alert('Login Successful'); </script>";  
-      header("location: index.php");
-      exit();
+
+
+            switch ($row['id_role']) {
+                case 1: // Admin
+                    header("location: admin/index.php");
+                    exit();
+                case 2: // Publisher
+                    header("location: publisher/index.php");
+                    exit();
+                case 3: // User
+                    header("location: index.php");
+                    exit();
+                default: // Default redirection for unknown roles
+                    header("location: index.php");
+                    exit();
+            }
     }
 
     else{
@@ -70,3 +85,4 @@ if(isset($_POST['submit']))
 </body>
 
 </html>
+

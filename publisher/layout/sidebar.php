@@ -1,5 +1,5 @@
 <div class="sidebar">
-<h1><a href="./index.php" style="text-decoration:none; color:white;">Admin</a></h1>
+<h1><a href="./index.php" style="text-decoration:none; color:white;">Publisher</a></h1>
         <ul>
             <label>Apps</label>
             <li><a href="./publish_content.php">CREATE APP</a></li>
