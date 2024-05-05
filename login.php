@@ -16,8 +16,22 @@ if(isset($_POST['submit']))
       $_SESSION['login'] = true;
       $_SESSION['sessionid'] = $row["user_id"];
       // echo "<script> alert('Login Successful'); </script>";  
-      header("location: index.php");
-      exit();
+
+
+            switch ($row['id_role']) {
+                case 1: // Admin
+                    header("location: admin/index.php");
+                    exit();
+                case 2: // Publisher
+                    header("location: publisher/index.php");
+                    exit();
+                case 3: // User
+                    header("location: index.php");
+                    exit();
+                default: // Default redirection for unknown roles
+                    header("location: index.php");
+                    exit();
+            }
     }
 
     else{
