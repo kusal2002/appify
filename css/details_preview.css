@@ -70,7 +70,8 @@ p {
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin: auto;
+  margin: 10%;
+  margin-bottom: 0%;
 }
 
 /* Hide the images by default */
