@@ -1,5 +1,4 @@
 <?php
-
 require 'config.php';
 if (isset($_POST['submit'])) {
   $fname = $_POST['firstname'];
@@ -7,24 +6,37 @@ if (isset($_POST['submit'])) {
   $email = $_POST['email'];
   $password = $_POST['password'];
   $cpassword = $_POST['cpassword'];
+  $role = $_POST['role']; // New line to get the selected role
+
   $duplicate = mysqli_query($conn, "SELECT * FROM `user` WHERE email = '$email' OR f_name = '$fname'");
   if (mysqli_num_rows($duplicate) > 0) {
-    echo "
-    <script>alert ('Username or Email Has Already Taken')</script>";
+    echo "<script>alert ('Username or Email Has Already Taken')</script>";
   } else {
     if ($password == $cpassword) {
-      $query = "INSERT INTO `user` (f_name, l_name, email, password) VALUES('$fname', '$lname', '$email', '$password')";
+      $query = "INSERT INTO `user` (f_name, l_name, email, password, id_role) VALUES('$fname', '$lname', '$email', '$password', '$role')";
       mysqli_query($conn, $query);
       echo "<script> alert('Registration Successful'); </script>";
+
+      // Redirect based on role
+      switch ($role) {
+        case 1: // Admin
+          header("location: admin/index.php");
+          exit();
+        case 2: // Publisher
+          header("location: publisher/index.php");
+          exit();
+        case 3: // User
+          header("location: index.php");
+          exit();
+        default: // Default redirection for unknown roles
+          header("location: index.php");
+          exit();
+      }
 
     } else {
       echo "<script> alert('Passwords do not match'); </script>";
     }
   }
-
-
-
-
 }
 ?>
 
@@ -161,7 +173,7 @@ if (isset($_POST['submit'])) {
         <lable>Confirm Password</lable><br>
         <input type="text" class="text" name="cpassword">
       </center><br><br>
-
+      <input type="hidden" name="role" value="3">
       <center><button type="submit" name="submit">REGISTER</button>
         <center>
           <h5>
@@ -188,7 +200,7 @@ if (isset($_POST['submit'])) {
         <lable>Confirm Password</lable><br>
         <input type="text" class="text" name="cpassword">
       </center><br><br>
-
+      <input type="hidden" name="role" value="2">
       <center><button type="submit" name="submit">REGISTER</button>
         <center>
           <h5>
