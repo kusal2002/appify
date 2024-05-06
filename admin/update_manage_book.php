@@ -5,12 +5,17 @@ $sql = "SELECT * FROM `book` WHERE book_id=$id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $bookname = $row['book_name'];
-$bookgenre = $row['genre'];
-$bookdescription = $row['book_description'];
-$author = $row['author'];
-$year = $row['year'];
-$language =  $row['language'];
-$pages = $row['pages'];
+$bookdescription=$row['book_description'];
+$language=$row['language'];
+$author=$row['author'];
+$genre = $row['genre'];
+$year=$row['year'];
+$pages=$row['pages'];
+$image1=$row['image_1'];
+$uploadfile=$row['upload_file'];
+
+
+
 // $image_path
 
 if (isset($_POST['submit'])) {
@@ -19,11 +24,11 @@ if (isset($_POST['submit'])) {
     $year = $_POST['year'];
     // $movierating = $_POST['movierating'];
     $genre = $_POST['genre'];
-    $Author = $_POST['author'];
-    $languagecatogary = $_POST['languagecatogary'];
-    $Pages = $_POST['Pages'];
-    $description = $_POST['description'];
-    $bookprice = $_POST['bookprice'];
+    $author = $_POST['author'];
+    $language = $_POST['language'];
+    $pages = $_POST['pages'];
+    $bookdescription = $_POST['bookdescription'];
+    
 
 
     //image upload
@@ -38,8 +43,9 @@ if (isset($_POST['submit'])) {
 
     $image_path = "./images/$image";
     $file_path = "./files/$file";
-
-    $sql = "INSERT INTO book (book_name,book_description,language,author,genre,year,pages,upload_file,image_1) VALUES ('$bookname', '$year', '$genre', '$Author','$languagecatogary','$Pages','$bookprice','$file_path','$image_path')";
+    
+    $sql="update book set bookname='$bookname', bookdescription='$bookdescription', language='$language' ,author='$author', genre='$genre', year='$year', pages='$pages' ,image_1='$image1', upload_file='$uploadfile' WHERE book_id=$id ";
+    //$sql = "INSERT INTO book (book_name,book_description,language,author,genre,year,pages,upload_file,image_1) VALUES ('$bookname','$bookdescription' ,'$language' ,'$author','$genre' ,'$year','$pages' ,'$uploadfile' ,'$image1' ,'$year', '$genre', '$author','$file_path','$image_path')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
@@ -72,13 +78,16 @@ if (isset($_POST['submit'])) {
                 <div class="left">
                     <div class="form">
                         <label><b style="font-size: 15px">App Name :</b></label><br>
-                        <input class="text" type="text" name="appname" value="<?php echo $bookname; ?>"><br><br>
+                        <input class="text" type="text" name="bookname" value="<?php echo $bookname; ?>"><br><br>
+
+                        <label><b style="font-size: 15px">Author :</b></label><br>
+                        <input class="text" type="text" name="author" value="<?php echo $author; ?>"><br><br>
 
                         <label><b style="font-size: 15px">Genre :</b></label><br>
-                        <input class="text" type="text" name="year" value="<?php echo $bookgenre; ?>"><br><br>
+                        <input class="text" type="text" name="genre" value="<?php echo $genre; ?>"><br><br>
                         
                         <label><b style="font-size: 15px">Description :</b></label><br>
-                        <textarea name="bookescription" id="description" cols="30" rows="2"><?php echo $bookdescription; ?></textarea><br><br>
+                        <textarea name="bookdescription" id="description" cols="30" rows="2"><?php echo $bookdescription; ?></textarea><br><br>
 
                         <label><b style="font-size: 15px">Year:</b></label><br>
                         <input class="text" type="text" name="year" value="<?php echo $year; ?>"><br><br>
