@@ -18,7 +18,7 @@
                 </tr>
                 <tr>
                     <td><a href="./blog.php">App</a></td>
-                    <td><a href="./admin/publish_content.php">Publish Your App</a></td>
+                    <td><a href="./publisher/index.php">Publish Your App</a></td>
                     <td><a href="#">Privacy Policy</a></td>
                 </tr>
                 <tr>

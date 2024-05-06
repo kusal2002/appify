@@ -1,28 +1,84 @@
+<?php
+session_start();
+require '../config.php';
+if (!empty($_SESSION['sessionid'])) {
+    $sessionid = $_SESSION["sessionid"];
+    $result = mysqli_query($conn, "SELECT * FROM blogs WHERE blog_id = $sessionid");
+    $row = mysqli_fetch_assoc($result);
+}
+// else{
+//     header("location: login.php");
+//     exit();
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-    <link rel="stylesheet" href="../css/admin_style.css">
+    <title>Admin:Manage blog</title>
+    <!-- <link rel="stylesheet" href="../css/admin_style.css"> -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/publisher_style.css">
+
+
 </head>
 
 <body>
-
-<?php include_once './layout/sidebar.php'?>
-
+    <?php include_once './layout/sidebar.php' ?>
     <div class="content">
-        <div class="containerlarge">
 
-
+        <div class="containermanageapp">
+            <center>
+                <h1>Manage Blogs</h1>
+            </center>
         </div>
+
+
+
+        <?php
+        $sql = "SELECT * FROM blogs";
+        $result = mysqli_query($conn, $sql);
+        $count = 0;
+        if ($result && mysqli_num_rows($result) > 0) {
+            echo '<div class="sampletabs">';
+            while ($row = mysqli_fetch_assoc($result)) {
+                if ($count % 3 === 0 && $count !== 0) {
+                    echo '</div><div class="sampletabs">';
+                }
+                $blog_id = $row['blog_id'];
+                echo'
+                    <div class="card">
+                        <div class="image">
+                            <img src="../uploads'.$row['image_1'].'">
+                        </div>
+                        <center>
+                        <div class="container">
+                            <h3><b>' . $row['title'] . ' </b></h3>
+                            <p>' . $row['discription'] . '</p>
+                        </div>
+                        <div class="container2">
+                        <a href="update_manage_app.php?updateid=' . $blog_id . '" class="text-light"><button class="avtivebtn">Update</button></a>
+                        <a href="deleteapp.php?deleteid=' . $blog_id . '" class="text-light"><button class="avtivebtn">Delete</button></a>
+                        </div>
+                        </center>
+                    </div>';
+                $count++;
+            }
+            echo '</div>';
+        }
+
+        ?>
+
+
 
     </div>
 
-
-
-
+    </div>
 
 </body>
 

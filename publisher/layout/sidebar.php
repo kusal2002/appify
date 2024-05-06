@@ -28,5 +28,6 @@
 
     </ul>
 
-    <button class="logout-btn">Logout</button>
+    <a href="../logout.php"><button class="logout-btn">Logout</button></a>
+    
 </div>
