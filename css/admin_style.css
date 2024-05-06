@@ -508,7 +508,7 @@ input[type="file"]::file-selector-button:active{
 }
 
 .ebtn {
-  width: 90%;
+  width: 50%;
   height: 35px;
   justify-content: center;
   font-family: Inter;

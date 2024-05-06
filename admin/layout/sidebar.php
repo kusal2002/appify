@@ -32,8 +32,8 @@ if (!empty($_SESSION['sessionid'])) {
         <label>Manage Content</label>
         <li><a href="./publish_content.php">CREATE Content</a></li>
         <li><a href="./manage_app.php">MANAGE APPS</a></li>
-        <li><a href="./manage_app.php">MANAGE Movie</a></li>
-        <li><a href="./manage_app.php">MANAGE Books</a></li>
+        <li><a href="./manage_movie.php">MANAGE Movie</a></li>
+        <li><a href="./manage_book.php">MANAGE Books</a></li>
     </ul>
     <ul>
         <label>Apps</label>

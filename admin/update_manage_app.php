@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $image_path = "./images/$image";
     $file_path = "./files/$file";
 
-    $sql = "update `apps` set app_name='$appname',category='$appcategory',app_description='$appdescription',price='$appPrice',upload_files='$file_path',app_profile_img='$image_path' where app_id=$id";
+    $sql = "update `apps` set app_name='$appname',category='$appcategory',app_description='$appdescription',price='$appPrice'  where app_id=$id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
