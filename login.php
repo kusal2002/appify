@@ -54,14 +54,16 @@ if(isset($_POST['submit']))
 <head>
   <meta charset="utf-8">
   <title>Login</title>
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/auth_style.css">
 
-  <style media="screen">
+  <!-- <style media="screen">
 
-  </style>
+  </style> -->
 </head>
 
 <body>
+<?php include_once './layout/header.php' ?>
     <h1>
       <center>Login
     </h1>
@@ -80,6 +82,8 @@ if(isset($_POST['submit']))
           <center>Don't have an account?&nbsp;<a href="./register.php">sign up</a>
         </h5>
   </form>
+
+  <?php include_once './layout/footer.php' ?>
 </body>
 
 </html>

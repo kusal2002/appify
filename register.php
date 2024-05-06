@@ -39,6 +39,7 @@ if(isset($_POST['submit']))
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/style.css">
 <style>
 body {
     font-family: Arial;
@@ -123,6 +124,7 @@ h1,h2,p{
 </style>
 </head>
 <body>
+<?php include_once './layout/header.php' ?>
 
 <center><h1>REGISTER</h1></center>
 <center><p>Select The User Type</p></center>
@@ -179,7 +181,7 @@ h1,h2,p{
 </form>
 </div>
 
-
+<?php include_once './layout/footer.php' ?>
 
 <script>
 function openUser(evt, userName) {
