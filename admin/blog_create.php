@@ -57,9 +57,9 @@ if (isset($_POST["submit"])) {
                             <label><b style="font-size: 15px">Small Description :</b></label><br />
                             <input class="text" type="text" name="blogdescription" /><br /><br />
 
-                            <label><b style="font-size: 15px">Choose Catogary :</b> </label><br />
+                            <label><b style="font-size: 15px">Choose category :</b> </label><br />
                             <select id="catogary" name="blogcatogary">
-                                <option selected disabled>Choose Catogary</option>
+                                <option selected disabled>Choose category</option>
                                 <option value="Games">Tech</option>
                                 <option value="Entertainment">Entertainment</option>
                                 <option value="Education">Education</option>
@@ -69,7 +69,7 @@ if (isset($_POST["submit"])) {
                             <br /><br />
 
                             <label><b style="font-size: 15px">Content :</b></label><br />
-                            <textarea name="Content" id="content" cols="30" rows="2"></textarea><br /><br />
+                            <textarea name="content" id="content" cols="30" rows="2"></textarea><br /><br />
 
 
                             

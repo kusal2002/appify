@@ -21,7 +21,6 @@ if (isset($_POST['submit2'])) {
     //movie details
     $moviename = $_POST['moviename'];
     $moviedescription = $_POST['moviedescription'];
-    // $movierating = $_POST['movierating'];
     $movieprice = $_POST['movieprice'];
     $movieyear = $_POST['movieyear'];
     $videolink = $_POST['movietrailer'];
@@ -43,7 +42,7 @@ if (isset($_POST['submit2'])) {
     $image_path = "./images/$image";
     $file_path = "./files/$file";
 
-    $sql = "INSERT INTO movie (title, category, movie_description, price, upload_files,image_1,year,video,cast) VALUES ('$moviename', '$moviecatogary', '$moviedescription', '$movieprice','$file_path','$image_path','$movieyear','$videolink','$director')";
+    $sql = "update `movie` set title='$moviename',category='$moviecatogary',movie_description='$moviedescription',cast='$director', year='$movieyear' , download_link='$videolink'  where movie_id=$id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
@@ -81,9 +80,6 @@ if (isset($_POST['submit2'])) {
 
                             <label><b style="font-size: 15px">Year :</b></label><br>
                             <input class="text" type="text" name="movieyear" value="<?php echo $year; ?>"><br><br>
-
-                            <label><b style="font-size: 15px">Trailer Link :</b></label><br>
-                            <input class="text" type="text" name="movietrailer" value="<?php echo $Dlink; ?>"><br><br>
 
                             <label><b style="font-size: 15px">Choose Catogary :</b></label><br>
                             <select id="catogary" name="moviecatogary">

@@ -14,30 +14,28 @@ if (!empty($_SESSION['sessionid'])) {
 
 $id = $row['user_id'];
 
-$sql="SELECT * FROM `user` WHERE user_id=$id";
+$sql = "select * from `user` where user_id=$id";
 $result = mysqli_query($conn, $sql);
-$row=mysqli_fetch_assoc($result);
-$fname=$row['f_name'];
-$lname=$row['l_name'];
-$email=$row['email'];
-$mobile=$row['phone_number'];
+$row = mysqli_fetch_assoc($result);
+$fname = $row['f_name'];
+$lname = $row['l_name'];
+$email = $row['email'];
+$mobile = $row['phone_number'];
 
-if(isset($_POST['submit'])) {
+if (isset($_POST['update'])) {
 
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
 
-    $sql="UPDATE `user` SET f_name='$fname',l_name='$lname',email='$email',phone_number='$mobile' where id=$id";
+    $sql = "update `user` set f_name='$fname',l_name='$lname',email='$email',phone_number='$mobile' where id=$id";
     $result = mysqli_query($conn, $sql);
-    if($result) {
+    if ($result) {
         echo '<script>alert("Record Updated Successfully")</script>';
     } else {
         die(mysqli_error($conn));
     }
-
-
 }
 
 
@@ -46,6 +44,7 @@ if(isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,11 +52,12 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" href="./css/editprofile_style.css">
     
 </head>
+
 <body>
         <div class="col" style="background-color:  #2d3c3e; height: 100%; padding:0; margin: 0;"> 
             <div style="background-color: rgb(255, 255, 255); width: 30%; height: 800px;">
             <img src="./Img/pro.png" style="width: 200px;height: 200px; padding-left: 25%;padding-top: 20%; padding-right: 25%;">
-            
+
         </div>
             <div style="background-color:  #2d3c3e; width: 70%; height: 600px; ">
             <form style="padding-top: 5%; padding-left: 10%;" action="">
@@ -80,6 +80,8 @@ if(isset($_POST['submit'])) {
             
             </div>            
         </div>
+    </div>
 
 </body>
+
 </html>

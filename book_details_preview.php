@@ -11,46 +11,11 @@
 </head>
 
 <body>
-
 <?php include_once './layout/header.php' ?>
 
+
     <div class="container">
-        <div class="left">
 
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="https://th.bing.com/th/id/OIP.f7Odb8ieZQTrfQ4H7FYYGAHaGl?rs=1&pid=ImgDetMain" style="height:500px; width:600px" />
-                    <div class="text">Picture 01</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="https://inspirationfeed.com/wp-content/uploads/2020/05/Funny-Good-Morning-Meme-43.jpeg" style="height:500px; width:600px" />
-                    <div class="text">Picture 02</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="https://i.redd.it/jzhf0sirfbu21.png" style="height:500px; width:600px" />
-                    <div class="text">Picture 03</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-            <!-- The dots -->
-            <div style="text-align: center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-        </div>
-        <div class="right">
             <?php
             require 'config.php';
             $sql = "SELECT * FROM book WHERE `book_id` = $_GET[id]";
@@ -63,7 +28,13 @@
                     $bookdescription = $row['book_description'];
                     $bookauthor = $row['author'];
 
-                    echo ' <div style="display:flex">
+                    echo '
+                    <div class="left">
+                    <img id="bookimg" src="./uploads'. $row['image_1'] . '">
+                </div>
+                <div class="right">
+
+                    <div style="display:flex">
                      <h1><b>' . $bookname . '</b></h1><img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
                      </div></th>
                     <span class="fa fa-star checked"></span>
