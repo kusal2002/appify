@@ -9,16 +9,17 @@
 .left {
   background-color: #262d2e;
   width: 65%;
+  height: 800px;
 }
 .right {
   background-color: #262d2e;
   width: 35%;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-left: 5%;
 }
 .img1 {
-  background-color: rgb(255, 255, 255);
-  width: 80%;
+  background-color: #262d2e;;
+  width: 90%;
   height: 400px;
   margin: 10%;
   margin-bottom: 0%;
@@ -42,7 +43,7 @@
 
 #bigimg {
   width: 100%;
-  height: 400px;
+  height: 600px;
 }
 
 #subimg {
