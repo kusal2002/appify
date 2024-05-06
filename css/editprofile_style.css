@@ -4,7 +4,7 @@
     opacity: 1; 
     border-radius: 5px; 
     border-width: 1px; 
-    border-color: #00BDD6FF; /* primary-500 */
+    border-color: rgb(58, 110, 117); /* primary-500 */
     border-style: solid;
 }
 label{
@@ -42,3 +42,4 @@ label{
 .btn:hover{
     color: rgb(0, 0, 0);
 }
+
