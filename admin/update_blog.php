@@ -6,7 +6,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $title = $row['title'];
 $category = $row['categories'];
-$content = $row['content'];
+$blogcontent = $row['content'];
 $discription = $row['discription'];
 
 
@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
 
     $image_path = "./images/$image";
 
-    $sql = "update `blogs` set title='$title',categories='$category',discription='$discription',content='$content'  where blog_id=$id";
+    $sql = "update `blogs` set title='$title',categories='$category',discription='$discription',content='$blogcontent'  where blog_id=$id";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -64,7 +64,7 @@ if (isset($_POST["submit"])) {
                             <input class="text" type="text" name="blogtitle" value="<?php echo $title; ?>"><br /><br />
 
                             <label><b style="font-size: 15px">Small Description :</b></label><br />
-                            <input class="text" type="text" name="blogdescription" value="<?php echo $title; ?>"><br /><br />
+                            <input class="text" type="text" name="blogdescription" value="<?php echo $discription; ?>"><br /><br />
 
                             <label><b style="font-size: 15px">Choose category :</b> </label><br />
                             <select id="catogary" name="blogcatogary">
@@ -78,7 +78,7 @@ if (isset($_POST["submit"])) {
                             <br /><br />
 
                             <label><b style="font-size: 15px">Content :</b></label><br />
-                            <textarea name="content" id="content" cols="30" rows="2" value="<?php echo $content; ?>"></textarea><br /><br />
+                            <textarea name="content" id="content" cols="30" rows="2" value="<?php echo $blogcontent; ?>"></textarea><br /><br />
 
 
                             
