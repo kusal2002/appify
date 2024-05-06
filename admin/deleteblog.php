@@ -10,7 +10,7 @@ if(isset($_GET['deleteblogid']))
     if($result)
     {
         // echo "Deleted Successfull";
-        header('location: ../admin/manage_app.php');
+        header('location: ../admin/manage_blog.php');
     }
     else
     {

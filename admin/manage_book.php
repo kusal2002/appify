@@ -62,7 +62,7 @@ if (!empty($_SESSION['sessionid'])) {
                         </div>
                         <div class="container2">
                         <a href="update_manage_book.php?updateid=' . $book_id . '" class="text-light"><button class="avtivebtn">Update</button></a>
-                        <a href="deletebook.php?deleteid=' . $book_id . '" class="text-light"><button class="avtivebtn">Delete</button></a>
+                        <a href="deletebook.php?deletebookid=' . $book_id . '" class="text-light"><button class="avtivebtn">Delete</button></a>
                         </div>
                         </center>
                     </div>';
