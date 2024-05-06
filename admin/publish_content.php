@@ -71,16 +71,16 @@ if (isset($_POST['submit1'])) {
     }
 } else if (isset($_POST['submit3'])) {
     //book details
-    $bookname = $_POST['bookname'];
-    $year = $_POST['year'];
-    // $movierating = $_POST['movierating'];
-    $genre = $_POST['genre'];
-    $Author = $_POST['Author'];
-    $languagecatogary = $_POST['languagecatogary'];
-    $Pages = $_POST['Pages'];
-    $description = $_POST['description'];
-    $bookprice = $_POST['bookprice'];
-
+    $bookname = $row['book_name'];
+    $bookdescription=$row['book_description'];
+    $language=$row['language'];
+    $author=$row['author'];
+    $genre = $row['genre'];
+    $year=$row['year'];
+    $pages=$row['pages'];
+    $image1=$row['image_1'];
+    $uploadfile=$row['upload_file'];
+    
 
     //image upload
     $image = $_FILES['image']['name'];
@@ -95,7 +95,8 @@ if (isset($_POST['submit1'])) {
     $image_path = "./images/$image";
     $file_path = "./files/$file";
 
-    $sql = "INSERT INTO book (book_name,book_description,language,author,genre,year,pages,upload_file,image_1) VALUES ('$bookname', '$year', '$genre', '$Author','$languagecatogary','$Pages','$bookprice','$file_path','$image_path')";
+    //$sql = "INSERT INTO book (book_name,book_description,language,author,genre,year,pages,upload_file,image_1) VALUES ('$bookname', '$year', '$genre', '$Author','$languagecatogary','$Pages','$bookprice','$file_path','$image_path')";
+    $sql="INSERT INTO book (book_name , book_description , language,author , genre ,year,pages,image_1 ,upload_file) VALUES ('$bookname' ,'$bookdescription' , '$language' ,'$author' ,'$genre' ,'$year' , '$pages','$image1' ,'$uploadfile')"; 
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
@@ -298,22 +299,16 @@ if (isset($_POST['submit1'])) {
             <label><b style="font-size: 15px">Genre :</b></label><br>
             <input class="text" type="text" name="genre"><br><br>
             <label><b style="font-size: 15px">Author :</b></label><br>
-            <input class="text" type="text" name="Author"><br><br>
+            <input class="text" type="text" name="author"><br><br>
 
-            <label><b style="font-size: 15px">Choose Language :</b></label><br>
-            <select id="catogary" name="languagecatogary">
-                <option selected disabled>Choose Catogary </option>
-                <option value="English">English</option>
-                <option value="Sinhala">Sinhala</option>
-                <option value="Hindi">Hindi</option>
-                <option value="Malayalam">Malayalam</option>
-            </select><br><br>
+            <label><b style="font-size: 15px">Language :</b></label><br>
+            <input class="text" type="text" name="language"><br><br>
 
             <label><b style="font-size: 15px">Pages :</b></label><br>
-            <input class="text" type="text" name="Pages"><br><br>
+            <input class="text" type="text" name="pages"><br><br>
 
             <label><b style="font-size: 15px">Description :</b></label><br>
-            <textarea name="description" id="description" cols="30" rows="2"></textarea><br><br>
+            <textarea name="bookdescription" id="description" cols="30" rows="2"></textarea><br><br>
 
 
             
