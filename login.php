@@ -54,25 +54,25 @@ if(isset($_POST['submit']))
 <head>
   <meta charset="utf-8">
   <title>Login</title>
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/auth_style.css">
 
-  <style media="screen">
+  <!-- <style media="screen">
 
-  </style>
+  </style> -->
 </head>
 
 <body>
-  <form id="login" method="POST" autocomplete="on">
+<?php include_once './layout/header.php' ?>
     <h1>
       <center>Login
-    </h1><br>
-    <center><button type="submit">User&nbsp;</button>
-      <button type="submit">Publisher</button>
-    </center><br><br>
+    </h1>
+  <form id="login" method="POST" autocomplete="on">
+   <br><br>
     <lable>Email</lable>
-    <input type="text" id="email" name="useremail">
+    <input type="text" class="text" id="email" name="useremail">
     <lable>Password</lable>
-    <input type="text" id="password" name="password"><br><br>
+    <input type="text" class="text"  id="password" name="password"><br><br>
 
     <p><input type="checkbox" id="rememberme" name="rememberme">
       Remember me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="kofie">Forgot password?</a></p><br>
@@ -82,6 +82,7 @@ if(isset($_POST['submit']))
           <center>Don't have an account?&nbsp;<a href="./register.php">sign up</a>
         </h5>
   </form>
+
 </body>
 
 </html>

@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FAQ</title>
     <link rel="stylesheet" href="./css/faq_style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- <script src="/main.js"></script> -->
   </head>
   <body>
+
+  <?php include_once './layout/header.php' ?>
+  
     <h2 style="color: rgb(242, 241, 247); text-align: center">Frequently Asked Questions</h2>
     <h5 style="color: white ; text-align: center">Have questions? </h5><br>
     <h5 style="color:white; text-align: center;"> you'll find the answers most valued by partners, along with access to step by step instructions and support</h5>
@@ -95,6 +99,9 @@
       </div>
     </div>
 
+
+    <?php include_once './layout/footer.php' ?>
 <script src="./js/main.js"></script>
+
   </body>
 </html>

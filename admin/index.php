@@ -1,10 +1,10 @@
 <?php
 session_start();
-require 'config.php';
+require '../config.php';
 if (!empty($_SESSION['sessionid'])) {
-    $sessionid = $_SESSION["sessionid"];
-    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
-    $row = mysqli_fetch_assoc($result);
+  $sessionid = $_SESSION["sessionid"];
+  $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
+  $row = mysqli_fetch_assoc($result);
 }
 
 
@@ -21,7 +21,7 @@ if (!empty($_SESSION['sessionid'])) {
 
 <body>
 
-<?php include_once './layout/sidebar.php'?>
+  <?php include_once './layout/sidebar.php' ?>
 
 
   <div class="content">
@@ -59,25 +59,40 @@ if (!empty($_SESSION['sessionid'])) {
           <div class="users">
             <div class="hederuser">
               <h1>Users</h1>
-              <button class="button">See More</button>
+              
             </div>
             <br>
-            <table>
+            <table border="1px">
               <tr style="width: 100%;">
-                <th>User Name</th>
-                <th>Email</th>
+                <th>User ID</th>
+                <th>Name</th>
                 <th>Mobile Number</th>
-                <th>Update Data</th>
-                <th>Status</th>
-                <th>Edit</th>
+                <th>Address</th>
+                <th>email</th>
               </tr>
               <tr>
-                <td>lithira</td>
-                <td>lithira@gmail.com</td>
-                <td>US</td>
-                <td>10/07/2023</td>
-                <td><button class="avtivebtn">Active</button></td>
-                <td><img src="Img\icons\pen.svg" id="iconpen"></td>
+                <?php
+                require'../config.php';
+                $sql = "select * from `user`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $user_id = $row['user_id'];
+                    $f_name = $row['f_name'];
+                    $phone_number = $row['phone_number'];
+                    $address = $row['address'];
+                    $email = $row['email'];
+                    echo '  <tr>
+                    <th scope="row">' . $user_id . '</th>
+                    <td>' . $f_name . '</td>
+                    <td>' . $phone_number . '</td>
+                    <td>' . $address . '</td>
+                    <td>' . $email . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
               </tr>
             </table>
           </div>
@@ -85,7 +100,7 @@ if (!empty($_SESSION['sessionid'])) {
           <div class="apps">
             <div class="hederuser">
               <h1>Apps</h1>
-              <button class="button">See More</button>
+              
             </div>
             <br>
             <table>
@@ -97,14 +112,153 @@ if (!empty($_SESSION['sessionid'])) {
                 <th>Edit</th>
               </tr>
               <tr>
-                <td>tuda</td>
-                <td>tuda@gmail.com</td>
-                <td>10/07/2023</td>
-                <td><button class="avtivebtn">Active</button></td>
-                <td><img src="/Img/icons/pen.svg" id="iconpen"></td>
+              <?php
+                require'../config.php';
+                $sql = "select * from `user`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $user_id = $row['user_id'];
+                    $f_name = $row['f_name'];
+                    $phone_number = $row['phone_number'];
+                    $address = $row['address'];
+                    $email = $row['email'];
+                    echo '  <tr>
+                    <th scope="row">' . $user_id . '</th>
+                    <td>' . $f_name . '</td>
+                    <td>' . $phone_number . '</td>
+                    <td>' . $address . '</td>
+                    <td>' . $email . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
               </tr>
             </table>
-
+            <br><br>
+          </div>
+          <div class="apps">
+            <div class="hederuser">
+              <h1>Apps</h1>
+              
+            </div>
+            <br>
+            <table>
+              <tr style="width: 100%;">
+                <th>App Name</th>
+                <th>App Description</th>
+                <th>Update Data</th>
+                <th>Status</th>
+                <th>Edit</th>
+              </tr>
+              <tr>
+              <?php
+                require'../config.php';
+                $sql = "select * from `user`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $user_id = $row['user_id'];
+                    $f_name = $row['f_name'];
+                    $phone_number = $row['phone_number'];
+                    $address = $row['address'];
+                    $email = $row['email'];
+                    echo '  <tr>
+                    <th scope="row">' . $user_id . '</th>
+                    <td>' . $f_name . '</td>
+                    <td>' . $phone_number . '</td>
+                    <td>' . $address . '</td>
+                    <td>' . $email . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
+              </tr>
+            </table>
+            <br><br>
+          </div>
+          <div class="apps">
+            <div class="hederuser">
+              <h1>Apps</h1>
+              
+            </div>
+            <br>
+            <table>
+              <tr style="width: 100%;">
+                <th>App Name</th>
+                <th>App Description</th>
+                <th>Update Data</th>
+                <th>Status</th>
+                <th>Edit</th>
+              </tr>
+              <tr>
+              <?php
+                require'../config.php';
+                $sql = "select * from `user`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $user_id = $row['user_id'];
+                    $f_name = $row['f_name'];
+                    $phone_number = $row['phone_number'];
+                    $address = $row['address'];
+                    $email = $row['email'];
+                    echo '  <tr>
+                    <th scope="row">' . $user_id . '</th>
+                    <td>' . $f_name . '</td>
+                    <td>' . $phone_number . '</td>
+                    <td>' . $address . '</td>
+                    <td>' . $email . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
+              </tr>
+            </table>
+            <br><br>
+          </div>
+          <div class="apps">
+            <div class="hederuser">
+              <h1>Apps</h1>
+              
+            </div>
+            <br>
+            <table>
+              <tr style="width: 100%;">
+                <th>App Name</th>
+                <th>App Description</th>
+                <th>Update Data</th>
+                <th>Status</th>
+                <th>Edit</th>
+              </tr>
+              <tr>
+              <?php
+                require'../config.php';
+                $sql = "select * from `user`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $user_id = $row['user_id'];
+                    $f_name = $row['f_name'];
+                    $phone_number = $row['phone_number'];
+                    $address = $row['address'];
+                    $email = $row['email'];
+                    echo '  <tr>
+                    <th scope="row">' . $user_id . '</th>
+                    <td>' . $f_name . '</td>
+                    <td>' . $phone_number . '</td>
+                    <td>' . $address . '</td>
+                    <td>' . $email . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
