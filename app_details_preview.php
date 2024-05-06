@@ -26,19 +26,19 @@ require 'config.php';
             <div class="slideshow-container">
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
-                    <img src="https://th.bing.com/th/id/OIP.f7Odb8ieZQTrfQ4H7FYYGAHaGl?rs=1&pid=ImgDetMain" style="height:500px; width:100%;" />
+                    <img src="https://th.bing.com/th/id/OIP.f7Odb8ieZQTrfQ4H7FYYGAHaGl?rs=1&pid=ImgDetMain" style="height:500px; width:600px" />
                     <div class="text">Picture 01</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
-                    <img src="https://inspirationfeed.com/wp-content/uploads/2020/05/Funny-Good-Morning-Meme-43.jpeg" style="height:500px; width:100%;" />
+                    <img src="https://inspirationfeed.com/wp-content/uploads/2020/05/Funny-Good-Morning-Meme-43.jpeg" style="height:500px; width:600px" />
                     <div class="text">Picture 02</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
-                    <img src="https://i.redd.it/jzhf0sirfbu21.png" style="height:500px; width:100%;" />
+                    <img src="https://i.redd.it/jzhf0sirfbu21.png" style="height:500px; width:600px" />
                     <div class="text">Picture 03</div>
                 </div>
 
@@ -101,6 +101,7 @@ require 'config.php';
 
         <?php include_once './layout/footer.php' ?>
 
+        <!--slideshow js-->
         <script>
             let slideIndex = 1;
             showSlides(slideIndex);
@@ -135,7 +136,7 @@ require 'config.php';
                 dots[slideIndex - 1].className += " active";
             }
         </script>
-
+    </div>
 </body>
 
 </html>
