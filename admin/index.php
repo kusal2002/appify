@@ -59,39 +59,36 @@ if (!empty($_SESSION['sessionid'])) {
           <div class="users">
             <div class="hederuser">
               <h1>Users</h1>
-              <button class="button">See More</button>
+              
             </div>
             <br>
-            <table>
+            <table border="1px">
               <tr style="width: 100%;">
                 <th>User ID</th>
                 <th>Name</th>
                 <th>Mobile Number</th>
                 <th>Address</th>
                 <th>email</th>
-                <th>Edit</th>
               </tr>
               <tr>
                 <?php
+                require'../config.php';
                 $sql = "select * from `user`";
-                $result = mysqli_query($con, $sql);
+                $result = mysqli_query($conn, $sql);
                 if ($result) {
                   while ($row = mysqli_fetch_assoc($result)) {
-                    $id = $row['user_id'];
-                    $name = $row['f_name'];
-                    $email = $row['phone_number'];
-                    $mobile = $row['address'];
+                    $user_id = $row['user_id'];
+                    $f_name = $row['f_name'];
+                    $phone_number = $row['phone_number'];
+                    $address = $row['address'];
                     $email = $row['email'];
                     echo '  <tr>
-                    <th scope="row">' . $id . '</th>
-                    <td>' . $name . '</td>
+                    <th scope="row">' . $user_id . '</th>
+                    <td>' . $f_name . '</td>
+                    <td>' . $phone_number . '</td>
+                    <td>' . $address . '</td>
                     <td>' . $email . '</td>
-                    <td>' . $mobile . '</td>
-                    <td>' . $password . '</td>
-                    <td>
-                    <button class="btn btn-primary"><a href="update.php? updateid=' . $id . '" class="text-light">Update</a></button>
-                    <button class="btn btn-danger"><a href="delete.php? deleteid=' . $id . '" class="text-light">Delete</a></button>
-                    </td>
+                    
                     </tr>';
                   }
                 }
@@ -103,26 +100,163 @@ if (!empty($_SESSION['sessionid'])) {
           <div class="apps">
             <div class="hederuser">
               <h1>Apps</h1>
-              <button class="button">See More</button>
+              
             </div>
             <br>
-            <table>
+            <table border="1px">
               <tr style="width: 100%;">
+                <th>App Id</th>
                 <th>App Name</th>
-                <th>App Description</th>
-                <th>Update Data</th>
-                <th>Status</th>
-                <th>Edit</th>
+                <th>Category</th>
+                <th>Publisher Id</th>
+                <th>Price</th>
               </tr>
               <tr>
-                <td>tuda</td>
-                <td>tuda@gmail.com</td>
-                <td>10/07/2023</td>
-                <td><button class="avtivebtn">Active</button></td>
-                <td><img src="/Img/icons/pen.svg" id="iconpen"></td>
+              <?php
+                require'../config.php';
+                $sql = "select * from `apps`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $app_id = $row['app_id'];
+                    $app_name = $row['app_name'];
+                    $app_category = $row['category'];
+                    $app_pubId = $row['publisher_id'];
+                    $app_price = $row['price'];
+                    echo '  <tr>
+                    <th scope="row">' . $app_id . '</th>
+                    <td>' . $app_name . '</td>
+                    <td>' . $app_category . '</td>
+                    <td>' . $app_pubId . '</td>
+                    <td>' . $app_price . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
               </tr>
             </table>
-
+            <br><br>
+          </div>
+          <div class="apps">
+            <div class="hederuser">
+              <h1>Movies</h1>
+              
+            </div>
+            <br>
+            <table border="1px">
+              <tr style="width: 100%;">
+                <th>Movie Id</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Category</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+              <?php
+                require'../config.php';
+                $sql = "select * from `movie`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $movie_id = $row['movie_id'];
+                    $movie_title = $row['title'];
+                    $movie_year = $row['year'];
+                    $movie_category = $row['category'];
+                    $movie_price = $row['price'];
+                    echo '  <tr>
+                    <th scope="row">' . $movie_id . '</th>
+                    <td>' . $movie_title . '</td>
+                    <td>' . $movie_year . '</td>
+                    <td>' . $movie_category . '</td>
+                    <td>' . $movie_price . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
+              </tr>
+            </table>
+            <br><br>
+          </div>
+          <div class="apps">
+            <div class="hederuser">
+              <h1>Books</h1>
+              
+            </div>
+            <br>
+            <table border="1px">
+              <tr style="width: 100%;">
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Language</th>
+                <th>Author</th>
+                <th>Genre</th>
+              </tr>
+              <tr>
+              <?php
+                require'../config.php';
+                $sql = "select * from `book`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $book_id = $row['book_id'];
+                    $book_name = $row['book_name'];
+                    $book_language = $row['language'];
+                    $b_author = $row['author'];
+                    $b_genre = $row['genre'];
+                    echo '  <tr>
+                    <th scope="row">' . $book_id . '</th>
+                    <td>' . $book_name . '</td>
+                    <td>' . $book_language . '</td>
+                    <td>' . $b_author . '</td>
+                    <td>' . $b_genre . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
+              </tr>
+            </table>
+            <br><br>
+          </div>
+          <div class="apps">
+            <div class="hederuser">
+              <h1>Blogs</h1>
+              
+            </div>
+            <br>
+            <table border="1px">
+              <tr style="width: 100%;">
+                <th>Blog Id</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Content</th>
+              </tr>
+              <tr>
+              <?php
+                require'../config.php';
+                $sql = "select * from `blogs`";
+                $result = mysqli_query($conn, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $blog_id = $row['blog_id'];
+                    $blog_title = $row['title'];
+                    $blog_category = $row['categories'];
+                    $blog_content = $row['content'];
+                    
+                    echo '  <tr>
+                    <th scope="row">' . $blog_id . '</th>
+                    <td>' . $blog_title . '</td>
+                    <td>' . $blog_category . '</td>
+                    <td>' . $blog_content . '</td>
+                    
+                    </tr>';
+                  }
+                }
+                ?>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
