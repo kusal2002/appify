@@ -60,26 +60,26 @@
                     $bookdescription = $row['book_description'];
                     $bookauthor = $row['author'];
 
-                    echo '  <h1><b>' . $bookname . '</b></h1></th><img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
+                    echo ' <div style="display:flex">
+                     <h1><b>' . $bookname . '</b></h1><img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
+                     </div></th>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
         
-                    <!-- <h5>500K+ rewiews</h5>
-                    <h5>10M+ downloads</h5>
-                    <h5>Size : 284.8 MB</h5> -->
-                    <h3><b>Year : </b>' . $row['year'] . '</h3>
-                    <h3><b>Genre : </b>' . $row['genre'] . '</h3>
-                    <h3><b>Author : </b>' . $bookauthor . '</h3>
-                    <h3><b>Language : </b>' . $row['language'] . '</h3>
-                    <h3><b>Pages : </b>' . $row['pages'] . '</h3>
+                    
+                    <h4><b>Year : </b>' . $row['year'] . '</h4>
+                    <h4><b>Genre : </b>' . $row['genre'] . '</h4>
+                    <h4><b>Author : </b>' . $bookauthor . '</h4>
+                    <h4><b>Language : </b>' . $row['language'] . '</h4>
+                    <h4><b>Pages : </b>' . $row['pages'] . '</h4><br><br>
                     
                     <div style="display: flex;">
                         <button id="btndown"><img src="./Img/icons/icons/outline/24px/download.svg"
                                 style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
-                        <button id="btnreadonly"><img src="./Img/icons/icons/fill/24px/book.svg"
+                        <button id="btndown"><img src="./Img/icons/icons/fill/24px/book.svg"
                                 style="padding-right: 5%; width: 10%; float: inline-start;">Read Only</button>
                     
                     </div>
