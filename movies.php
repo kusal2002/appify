@@ -46,7 +46,7 @@ if(!empty($_SESSION['id'])){
                 }
                 
                 echo '<div class="card">';
-                echo '<a href="./movie_details_preview.php">';
+                echo '<a href="./movie_details_preview.php?id='. $row['movie_id'] .'">';
                 echo '<div class="image">';
                 echo '  <img src="./Img/1.png" alt="">';
                 echo '  </div>';
