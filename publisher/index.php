@@ -13,10 +13,7 @@
   <?php include_once './layout/sidebar.php' ?>
 
   <div class="content">
-    <div id="dashboard">
-      <h1>Welcome to your dashboard</h1>
-      <a href="logout.php" class="sign-out">Sign out</a>
-    </div>
+
 
 
 
