@@ -108,12 +108,9 @@ if (isset($_POST['submit'])) {
                     <div class="addimage">
                         <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
                         <input type="file" name="file1" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="file2" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="file3" style="padding-left: 10%;"><br><br>
                     </div><br><br><br><br>
                     <div class="end">
-                        <!-- <button class="ebtn">Preview</button> -->
-                        <!-- <button type="submit" class="ebtn">Publish</button> -->
+
                         <button type="submit" name="submit" class="ebtn">Publish</button>
 
                     </div>

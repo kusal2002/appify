@@ -287,7 +287,7 @@ if (isset($_POST['submit1'])) {
             <form method="post" enctype="multipart/form-data">
 
                 <div class="containerrrr">
-                    <div class="left" style="width: 50%;">
+                    <div class="left">
                         <div class="form">
                             <label><b style="font-size: 15px">Book Name :</b></label><br>
                             <input class="text" type="text" name="bookname"><br><br>
@@ -345,11 +345,9 @@ if (isset($_POST['submit1'])) {
                     <div class="addimage">
                         <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
                         <input type="file" name="image1" style="padding-left: 10%;"><br><br>
-                        <!-- <input type="file" name="image2" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="image3" style="padding-left: 10%;"><br><br> -->
                     </div><br><br><br><br>
                     <div class="end">
-                    <button type="submit2" name="submit2" class="ebtn">Publish</button>
+                    <button type="submit3" name="submit3" class="ebtn">Publish</button>
                     </div>
                 </div>
             </form>
