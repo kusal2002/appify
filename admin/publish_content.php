@@ -50,9 +50,9 @@ if (isset($_POST['submit1'])) {
 
 
     //image upload
-    $image = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image']['tmp_name'];
-    move_uploaded_file($image_tmp, "../uploads/images/$image");
+    // $image = $_FILES['image']['name'];
+    // $image_tmp = $_FILES['image']['tmp_name'];
+    // move_uploaded_file($image_tmp, "../uploads/images/$image");
 
     //file upload
     $file = $_FILES['file']['name'];
@@ -258,17 +258,16 @@ if (isset($_POST['submit1'])) {
                         </div>
                     </div>
                     <div class="right">
-                        <div class="uploadfile">
+                        <!-- <div class="uploadfile">
                             <h2 style="padding-left: 10%; padding-top: 5%;">Upload Files Here</h2>
                             <input type="file" name="file" style="padding-left: 10%;"><br><br>
-                        </div>
+                        </div> -->
                         <div class="addimage">
                             <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
-                            <input type="file" name="video" style="padding-left: 10%;"><br><br>
-                            <input type="file" name="image1" style="padding-left: 10%;"><br><br>
-                            <input type="file" name="image2" style="padding-left: 10%;"><br><br>
-                        </div><br><br><br><br>
-                        <div class="end">
+                            <input type="file" name="video" style="padding-left: 10%;">
+                            
+                        </div>
+                        <div class="end" style="margin: 0%;">
                             <!-- <button class="ebtn">Priview</button> -->
                             <!-- <button type="submit" class="ebtn">Publish</button> -->
                             <button type="submit2" name="submit2" class="ebtn">Publish</button>

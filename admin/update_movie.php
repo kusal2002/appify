@@ -43,7 +43,7 @@ if (isset($_POST['submit2'])) {
     $image_path = "./images/$image";
     $file_path = "./files/$file";
 
-    $sql = "INSERT INTO movie (title, category, movie_description, price, upload_files,image_1,year,video,cast) VALUES ('$moviename', '$moviecatogary', '$moviedescription', '$movieprice','$file_path','$image_path','$movieyear','$videolink','$director')";
+    $sql = "update `movie` set title='$title',category='$category',movie_description='$movie_description',cast='$cast', year='$year' , download_link='$Dlink'  where movie_id=$id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
@@ -86,7 +86,7 @@ if (isset($_POST['submit2'])) {
                             <input class="text" type="text" name="movietrailer" value="<?php echo $Dlink; ?>"><br><br>
 
                             <label><b style="font-size: 15px">Choose Catogary :</b></label><br>
-                            <select id="catogary" name="moviecatogary">
+                            <select id="catogary" name=" ">
                                 <option selected disabled>Choose Catogary </option>
                                 <option value="Games" <?php if ($category == 'Games') echo 'selected'; ?>>Games</option>
                                 <option value="Entertainment" <?php if ($category == 'Entertainment') echo 'selected'; ?>>Entertainment</option>
