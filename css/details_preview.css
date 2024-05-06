@@ -60,9 +60,8 @@ p {
   color: rgb(255, 255, 255);
 }
 
-
 /*slideshow*/
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -152,10 +151,13 @@ p {
 }
 
 @keyframes fade {
-  from {opacity: 0.4;}
-  to {opacity: 1;}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 
 /* movie */
 #btndown,
