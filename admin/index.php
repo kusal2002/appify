@@ -74,7 +74,7 @@ if (!empty($_SESSION['sessionid'])) {
               <tr>
                 <?php
                 $sql = "select * from `user`";
-                $result = mysqli_query($con, $sql);
+                $result = mysqli_query($conn, $sql);
                 if ($result) {
                   while ($row = mysqli_fetch_assoc($result)) {
                     $id = $row['user_id'];
