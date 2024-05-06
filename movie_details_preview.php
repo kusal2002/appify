@@ -45,6 +45,7 @@
             </div>
         </div>
         <div class="right">
+            
             <div style="display: flex;">
                 <h1 style="margin-bottom: 4%;">Interstellar</h1>
                 <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
@@ -75,12 +76,16 @@
                 <button id="btndown"><img src="./Img/icons/icons/outline/24px/download.svg" style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
             </div>
 
-            <p style="text-align: justify; padding-right: 40%;">
-                TimeTrack is your go-to app for effective time management, helping you stay organized, productive, and on top of your schedule. With intuitive features and customizable options, TimeTrack empowers you to make the most of your time, whether you're juggling work tasks, personal projects, or academic assignments.
-            </p>
-            <h4 style="margin: 0;">Write a review ✍️</h4>
-            <textarea name="review" id="review" cols="45" rows="8"></textarea>
-            <input id="submit" type="submit" value="Submit">
+                <br>
+                <p style="text-align: justify; padding-right: 40%;">
+                    TimeTrack is your go-to app for effective time management, helping you stay organized, productive, and on top of your schedule. With intuitive features and customizable options, TimeTrack empowers you to make the most of your time, whether you are juggling work tasks, personal projects, or academic assignments.
+                </p><br>
+                <h4 style="margin: 0;">Write a review ✍️</h4>
+                <textarea name="review" id="review" cols="45" rows="8"></textarea>
+                <input id="submit" type="submit" value="Submit">' ;
+                }
+            }
+            ?>
         </div>
     </div>
 
