@@ -128,8 +128,8 @@ h1,h2,p{
 <center><p>Select The User Type</p></center>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'User')">USER</button>
-  <button class="tablinks" onclick="openCity(event, 'Publisher')">PUBLISHER</button>
+  <button class="tablinks" onclick="openUser(event, 'User')">USER</button>
+  <button class="tablinks" onclick="openUser(event, 'Publisher')">PUBLISHER</button>
   
 </div>
 
@@ -182,7 +182,7 @@ h1,h2,p{
 
 
 <script>
-function openCity(evt, cityName) {
+function openUser(evt, userName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -192,7 +192,7 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(userName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 </script>
