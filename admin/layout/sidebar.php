@@ -28,7 +28,7 @@ require '.././config.php';
         <ul>
             <label>Apps</label>
             <li><a href="./publish_content.php">CREATE APP</a></li>
-            <li>MANAGE APPS</li>
+            <li><a href="./manage_app.php">MANAGE APPS</a></li>
             <li>APPS</li>
             <li>MOVIES</li>
             <li>BOOKS</li>
