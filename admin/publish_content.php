@@ -213,7 +213,7 @@ if (isset($_POST['submit1'])) {
                             <label><b style="font-size: 15px">Movie Name :</b></label><br>
                             <input class="text" type="text" name="moviename"><br><br>
 
-                            <label><b style="font-size: 15px">Director Name :</b></label><br>
+                            <label><b style="font-size: 15px">Cast :</b></label><br>
                             <input class="text" type="text" name="moviecast"><br><br>
 
                             <label><b style="font-size: 15px">Year :</b></label><br>

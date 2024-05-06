@@ -1,0 +1,20 @@
+
+<?php
+include '../config.php';
+if(isset($_GET['deleteid']))
+{
+    $id=$_GET['deleteid'];
+
+    $sql="delete from `movie` where movie_id=$id";
+    $result=mysqli_query($conn,$sql);
+    if($result)
+    {
+        // echo "Deleted Successfull";
+        header('location: ../admin/manage_movie.php');
+    }
+    else
+    {
+        die(mysqli_error($conn));
+    }
+}
+?>

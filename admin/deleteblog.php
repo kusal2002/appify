@@ -5,7 +5,7 @@ if(isset($_GET['deleteblogid']))
 {
     $id=$_GET['deleteblogid'];
 
-    $sql="delete from `blog` where blog_id=$id";
+    $sql="delete from `blogs` where blog_id=$id";
     $result=mysqli_query($conn,$sql);
     if($result)
     {
