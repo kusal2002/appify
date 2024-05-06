@@ -1,35 +1,16 @@
 <?php
-if (isset($_POST['submit1'])) {
-
-    //app details
-    $appname = $_POST['appname'];
-    $appcatogary = $_POST['appcatogary'];
-    $appdescription = $_POST['appdescription'];
-    $appPrice = $_POST['appprice'];
-
-
-
-    //image upload
-    $image = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image']['tmp_name'];
-    move_uploaded_file($image_tmp, "../uploads/images/$image");
-
-    //file upload
-    $file = $_FILES['file']['name'];
-    $file_tmp = $_FILES['file']['tmp_name'];
-    move_uploaded_file($file_tmp, "../uploads/files/$file");
-
-    $image_path = "./images/$image";
-    $file_path = "./files/$file";
-
-    $sql = "INSERT INTO apps (app_name, category, app_description, price, upload_files, app_profile_img) VALUES ('$appname', '$appcatogary', '$appdescription', '$appPrice','$file_path','$image_path')";
-    $result = mysqli_query($conn, $sql);
-    if ($result) {
-        echo '<script>alert("Data inserted successfully")</script>';
-    } else {
-        die(mysqli_error($conn));
-    }
+session_start();
+require '../config.php';
+if (!empty($_SESSION['sessionid'])) {
+    $sessionid = $_SESSION["sessionid"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
+    $row = mysqli_fetch_assoc($result);
 }
+// else{
+//     header("location: login.php");
+//     exit();
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +21,7 @@ if (isset($_POST['submit1'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin:Manage Apps</title>
     <!-- <link rel="stylesheet" href="../css/admin_style.css"> -->
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css/publisher_style.css">
 
 
@@ -51,94 +32,50 @@ if (isset($_POST['submit1'])) {
     <div class="content">
 
         <div class="containermanageapp">
-            <center><h1>Manage Apps</h1></center>
+            <center>
+                <h1>Manage Apps</h1>
+            </center>
         </div>
 
 
-            <div class="sampletabs">
-                <div class="card">
-                    <div class="image">
-                        <img src="../Img/1.png" alt="">
-                    </div>
-                    <div class="container">
-                        <h3><b>Sample Blog</b></h3>
-                    </div>
-                    <div class="container2">
-                        <button class="avtivebtn">Update</button>
-                        <button class="avtivebtn">Delete</button>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="image">
-                        <img src="/Img/appify.png" alt="">
-                    </div>
-                    <div class="container">
-                        <h3><b>Sample Blog</b></h3>
-                    </div>
-                    <div class="container2">
-                        <button class="avtivebtn">Update</button>
-                        <button class="avtivebtn">Delete</button>
-                    </div>
-                </div>
+        <?php
+        $sql = "SELECT * FROM apps";
+        $result = mysqli_query($conn, $sql);
+        $count = 0;
+        if ($result && mysqli_num_rows($result) > 0) {
+            echo '<div class="sampletabs">';
+            while ($row = mysqli_fetch_assoc($result)) {
+                if ($count % 3 === 0 && $count !== 0) {
+                    echo '</div><div class="sampletabs">';
+                }
+                $app_id = $row['app_id'];
+                echo '
+                    <div class="card">
+                        <div class="image">
+                            <img src="../Img/1.png" alt="">
+                        </div>
+                        <center>
+                        <div class="container">
+                            <h3><b>' . $row['app_name'] . ' </b></h3>
+                            <p>' . $row['category'] . '</p>
+                        </div>
+                        <div class="container2">
+                        <a href="update_manage_app.php?updateid=' . $app_id . '" class="text-light"><button class="avtivebtn">Update</button></a>
+                        <a href="deleteapp.php?deleteid=' . $app_id . '" class="text-light"><button class="avtivebtn">Delete</button></a>
+                        </div>
+                        </center>
+                    </div>';
+                $count++;
+            }
+            echo '</div>';
+        }
 
-                <div class="card">
-                    <div class="image">
-                        <img src="/Img/appify.png" alt="">
-                    </div>
-                    <div class="container">
-                        <h3><b>Sample Blog</b></h3>
-                    </div>
-                    <div class="container2">
-                        <button class="avtivebtn">Update</button>
-                        <button class="avtivebtn">Delete</button>
-                    </div>
-                </div>
+        ?>
 
 
 
-            </div>
-            <div class="sampletabs">
-                <div class="card">
-                    <div class="image">
-                        <img src="/Img/appify.png" alt="">
-                    </div>
-                    <div class="container">
-                        <h3><b>Sample Blog</b></h3>
-                    </div>
-                    <div class="container2">
-                        <button class="avtivebtn">Update</button>
-                        <button class="avtivebtn">Delete</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="image">
-                        <img src="/Img/appify.png" alt="">
-                    </div>
-                    <div class="container">
-                        <h3><b>Sample Blog</b></h3>
-                    </div>
-                    <div class="container2">
-                        <button class="avtivebtn">Update</button>
-                        <button class="avtivebtn">Delete</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="image">
-                        <img src="/Img/appify.png" alt="">
-                    </div>
-                    <div class="container">
-                        <h3><b>Sample Blog</b></h3>
-                    </div>
-                    <div class="container2">
-                        <button class="avtivebtn">Update</button>
-                        <button class="avtivebtn">Delete</button>
-                    </div>
-                </div>
-
-            </div>
+    </div>
 
     </div>
 
