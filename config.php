@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$databasename = "appify_sampledata_full2";
+$databasename = "appify_sampledata_full";
 
 // Connection Create
 $conn = new mysqli($servername, $username, $password, $databasename);
