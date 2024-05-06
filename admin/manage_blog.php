@@ -62,8 +62,8 @@ if (!empty($_SESSION['sessionid'])) {
                             <p>' . $row['discription'] . '</p>
                         </div>
                         <div class="container2">
-                        <a href="update_manage_app.php?updateid=' . $blog_id . '" class="text-light"><button class="avtivebtn">Update</button></a>
-                        <a href="deleteapp.php?deleteid=' . $blog_id . '" class="text-light"><button class="avtivebtn">Delete</button></a>
+                        <a href="update_blog.php?updateid=' . $blog_id . '" class="text-light"><button class="avtivebtn">Update</button></a>
+                        <a href="deleteblog.php?deleteblogid=' . $blog_id . '" class="text-light"><button class="avtivebtn">Delete</button></a>
                         </div>
                         </center>
                     </div>';
