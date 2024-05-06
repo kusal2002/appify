@@ -45,7 +45,7 @@ if(!empty($_SESSION['id'])){
                     echo '</div><div class="sampletabs">';
                 }
                 echo '<div class="card">';
-                echo '<a href="./book_details_preview.php">';
+                echo '<a href="./book_details_preview.php?id='. $row['book_id'] .'">';
                 echo '<div class="image">';
                 echo '  <img src="./Img/1.png" alt="">';
                 echo '  </div>';
