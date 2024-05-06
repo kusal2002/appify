@@ -9,12 +9,15 @@
 .left {
   background-color: #262d2e;
   width: 65%;
+  height: 100vh;
 }
 .right {
   background-color: #262d2e;
   width: 35%;
   padding-top: 5%;
   padding-left: 5%;
+  height: 100vh;
+
 }
 .img1 {
   background-color: rgb(255, 255, 255);
