@@ -83,7 +83,6 @@ if(isset($_POST['submit']))
         </h5>
   </form>
 
-  <?php include_once './layout/footer.php' ?>
 </body>
 
 </html>
