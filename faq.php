@@ -101,7 +101,7 @@
 
 
     <?php include_once './layout/footer.php' ?>
-<script src="./js/main.js"></script>
+<script src="./js/main.js"></script> <!-- from w3 school -->
 
   </body>
 </html>
