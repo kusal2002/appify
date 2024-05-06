@@ -11,20 +11,23 @@ if (!empty($_SESSION['sessionid'])) {
 
 
 <div class="sidebar">
-    <h1><a href="./index.php" style="text-decoration:none; color:white;">Admin</a></h1>
-    <?php
-    require '.././config.php';
+    <h1 style="margin:0%"><a href="./index.php" style="text-decoration:none; color:white;">Admin</a></h1>
 
-    $sql = "select * from `user`";
-    $result = mysqli_query($conn, $sql);
-    if ($result && mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $name =  $row['f_name'];
-        echo '<h2 style="color:#00bdd6">Welcome ' . $name . '</h2>';
-    }
+    <div style="width: 80%; margin:0%">
+        <?php
+            require '.././config.php';
+
+            $sql = "select * from `user`";
+            $result = mysqli_query($conn, $sql);
+            if ($result && mysqli_num_rows($result) > 0) {
+                $row = mysqli_fetch_assoc($result);
+                $name =  $row['f_name'];
+                echo '<h2 style="color:#00bdd6">Welcome ' . $name . '</h2>';
+            }
 
 
-    ?>
+        ?>
+    </div>
     <ul>
         <label>Manage Content</label>
         <li><a href="./publish_content.php">CREATE Content</a></li>

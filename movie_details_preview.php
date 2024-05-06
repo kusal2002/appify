@@ -83,8 +83,7 @@
                 <h4 style="margin: 0;">Write a review ✍️</h4>
                 <textarea name="review" id="review" cols="45" rows="8"></textarea>
                 <input id="submit" type="submit" value="Submit">' ;
-                }
-            }
+                
             ?>
         </div>
     </div>
