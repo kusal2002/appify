@@ -1,3 +1,49 @@
+<?php
+
+session_start();
+require 'config.php';
+if (!empty($_SESSION['sessionid'])) {
+    $sessionid = $_SESSION["sessionid"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
+    $row = mysqli_fetch_assoc($result);
+}
+// else{
+//     header("location: login.php");
+//     exit();
+// }
+
+$id = $row['user_id'];
+
+$sql="select * from `user` where user_id=$id";
+$result = mysqli_query($conn, $sql);
+$row=mysqli_fetch_assoc($result);
+$fname=$row['f_name'];
+$lname=$row['l_name'];
+$email=$row['email'];
+$mobile=$row['phone_number'];
+
+if(isset($_POST['submit'])) {
+
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+
+    $sql="update `user` set f_name='$fname',l_name='$lname',email='$email',phone_number='$mobile' where id=$id";
+    $result = mysqli_query($conn, $sql);
+    if($result) {
+        echo '<script>alert("Record Updated Successfully")</script>';
+    } else {
+        die(mysqli_error($conn));
+    }
+
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,18 +60,17 @@
         </div>
             <div style="background-color: rgb(255, 255, 255);; width: 70%; height: 700px; ">
             <form style="padding-top: 5%; padding-left: 10%;" action="">
-                <label for="propic">Profile Picture</label><br>
-                <input class="text" type="file"><br><br>
-                <label for="fullname">Full Name</label><br>
-                <input class="text" type="text" placeholder="Your Full name"><br><br>
+
+                <label for="fullname">First Name</label><br>
+                <input class="text" type="text" name="fname" value="<?php echo $fname; ?>"><br><br>
+                <label for="fullname">Last Name</label><br>
+                <input class="text"  name="lname" type="text" value="<?php echo $lname; ?>"><br><br>
                 <label for="email">Email</label><br>
-                <input class="text" type="text" placeholder="Your Full name"><br><br>
+                <input class="text" type="text"name="email" value="<?php echo $email; ?>"><br><br>
                 <label for="PhoneNumber">Phone Number</label><br>
-                <input class="text" type="text" placeholder="Your Phone number"><br><br>
-                <label for="Location">Location</label><br>
-                <input class="text" type="text" placeholder="Select Your Country"><br><br>
-                <label for="Aboutme">About me</label><br>
-                <textarea class="textarea"  placeholder="Tell somthing about yourself"></textarea><br><br>
+                <input class="text" type="text"name="mobile" value="<?php echo $mobile; ?>"><br><br>
+                
+                
             </form>
             
             <button class="btn" style="margin-right: 8%;">Save Profile</button>

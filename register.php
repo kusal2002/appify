@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'config.php';
 if (isset($_POST['submit'])) {
   $fname = $_POST['firstname'];
@@ -6,7 +7,7 @@ if (isset($_POST['submit'])) {
   $email = $_POST['email'];
   $password = $_POST['password'];
   $cpassword = $_POST['cpassword'];
-  $role = $_POST['role']; // New line to get the selected role
+  $role = $_POST['role'];
 
   $duplicate = mysqli_query($conn, "SELECT * FROM `user` WHERE email = '$email' OR f_name = '$fname'");
   if (mysqli_num_rows($duplicate) > 0) {
@@ -15,26 +16,33 @@ if (isset($_POST['submit'])) {
     if ($password == $cpassword) {
       $query = "INSERT INTO `user` (f_name, l_name, email, password, id_role) VALUES('$fname', '$lname', '$email', '$password', '$role')";
       mysqli_query($conn, $query);
-      echo "<script> alert('Registration Successful'); </script>";
+      // echo "<script> alert('Registration Successful'); </script>";
 
-      // Redirect based on role
-      switch ($role) {
-        case 1: // Admin
-          header("location: admin/index.php");
-          exit();
-        case 2: // Publisher
-          header("location: publisher/index.php");
-          exit();
-        case 3: // User
-          header("location: index.php");
-          exit();
-        default: // Default redirection for unknown roles
-          header("location: index.php");
-          exit();
+      $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' AND password = '$password'");
+      if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['login'] = true;
+        $_SESSION['sessionid'] = $row["user_id"];
+
+        // Redirect based on role
+        switch ($role) {
+          case 1: // Admin
+            header("location: admin/index.php");
+            exit();
+          case 2: // Publisher
+            header("location: publisher/index.php");
+            exit();
+          case 3: // User
+            header("location: index.php");
+            exit();
+          default: // Default redirection for unknown roles
+            header("location: index.php");
+            exit();
+        }
+
+      } else {
+        echo "<script> alert('Passwords do not match'); </script>";
       }
-
-    } else {
-      echo "<script> alert('Passwords do not match'); </script>";
     }
   }
 }
@@ -71,7 +79,7 @@ if (isset($_POST['submit'])) {
       padding: 14px 16px;
       transition: 0.3s;
       font-size: 17px;
-      color:#00bdd6;
+      color: #00bdd6;
       font-size: 20px;
       font-weight: 900;
     }

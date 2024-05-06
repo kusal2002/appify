@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+<?php include_once './layout/header.php' ?>
+
     <div class="container">
         <div class="left">
 
