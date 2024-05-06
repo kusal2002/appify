@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
     $image_path = "./images/$image";
     $file_path = "./files/$file";
     
-    $sql="update book set bookname='$bookname', bookdescription='$bookdescription', language='$language' ,author='$author', genre='$genre', year='$year', pages='$pages' ,image_1='$image1', upload_file='$uploadfile' WHERE book_id=$id ";
+    $sql="update  `book` set book_name='$bookname', book_description='$bookdescription', language='$language' ,author='$author', genre='$genre', year='$year', pages='$pages' ,image_1='$image1', upload_file='$uploadfile' WHERE book_id=$id ";
     //$sql = "INSERT INTO book (book_name,book_description,language,author,genre,year,pages,upload_file,image_1) VALUES ('$bookname','$bookdescription' ,'$language' ,'$author','$genre' ,'$year','$pages' ,'$uploadfile' ,'$image1' ,'$year', '$genre', '$author','$file_path','$image_path')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
