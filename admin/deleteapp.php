@@ -1,11 +1,11 @@
 
 <?php
 include '../config.php';
-if(isset($_GET['deleteid']))
+if(isset($_GET['deleteappid']))
 {
-    $id=$_GET['deleteid'];
+    $id=$_GET['deleteappid'];
 
-    $sql="delete from `blogs` where blog_id=$id";
+    $sql="delete from `apps` where app_id=$id";
     $result=mysqli_query($conn,$sql);
     if($result)
     {

@@ -16,15 +16,20 @@ if (isset($_POST['submit1'])) {
     $image_tmp = $_FILES['image']['tmp_name'];
     move_uploaded_file($image_tmp, "../uploads/images/$image");
 
+    $image2 = $_FILES['image2']['name2'];
+    $image2_tmp = $_FILES['image2']['tmp_name'];
+    move_uploaded_file($image2_tmp, "../uploads/images/$image2");
+
     //file upload
     $file = $_FILES['file']['name'];
     $file_tmp = $_FILES['file']['tmp_name'];
     move_uploaded_file($file_tmp, "../uploads/files/$file");
 
     $image_path = "./images/$image";
+    $image_path2 = "./images/$image2";
     $file_path = "./files/$file";
 
-    $sql = "INSERT INTO apps (app_name, category, app_description, price, upload_files, app_profile_img) VALUES ('$appname', '$appcatogary', '$appdescription', '$appPrice','$file_path','$image_path')";
+    $sql = "INSERT INTO apps (app_name, category, app_description, price, upload_files, app_profile_img,image_1) VALUES ('$appname', '$appcatogary', '$appdescription', '$appPrice','$file_path','$image_path','$image_path2')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
@@ -340,15 +345,12 @@ if (isset($_POST['submit1'])) {
                     <div class="addimage">
                         <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
                         <input type="file" name="image1" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="image2" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="image3" style="padding-left: 10%;"><br><br>
                     </div><br><br><br><br>
                     <div class="end">
-                        <!-- <button class="ebtn">Priview</button> -->
-                        <button class="ebtn">Publish</button>
+                    <button type="submit3" name="submit3" class="ebtn">Publish</button>
                     </div>
                 </div>
-
+            </form>
         </div>
     </div>
 
@@ -360,22 +362,18 @@ if (isset($_POST['submit1'])) {
 
     <script>
         function openCity(evt, cityName) {
-            // Declare all variables
             var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
+//hide all elements
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
 
-            // Get all elements with class="tablinks" and remove the class "active"
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
 
-            // Show the current tab, and add an "active" class to the button that opened the tab
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
