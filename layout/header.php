@@ -14,7 +14,7 @@ if (!empty($_SESSION['sessionid'])) {
 <div class="navbar">
     <div class="container">
         <div class="logo">
-            <img src="img/logo.png" alt="logo">
+            <a href="./index.php"><img src="img/logo.png" alt="logo"></a>
         </div>
         <div class="links">
             <li><a href="./index.php" <?php if (basename($_SERVER['PHP_SELF']) == 'index.php')

@@ -17,7 +17,7 @@ if(!empty($_SESSION['id'])){
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Blogs</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -36,7 +36,7 @@ if(!empty($_SESSION['id'])){
     </div>
     <div class="sampletabs">
         <?php
-        $sql = "select * from blogs";
+        $sql = "select * from blogs ";
         $result = mysqli_query($conn, $sql);
         $count = 0;
         if ($result && mysqli_num_rows($result) > 0) {
@@ -44,10 +44,11 @@ if(!empty($_SESSION['id'])){
                 if ($count % 4 === 0 && $count !== 0) {
                     echo '</div><div class="sampletabs">';
                 }
+                $blog_id = $row['blog_id'];
                 echo '<div class="card">';
-                echo '<a href="./books.php">';
+                echo '<a href="./blog_post.php?id=' . $blog_id . '">';
                 echo '<div class="image">';
-                echo '  <img src="./Img/1.png" alt="">';
+                echo '  <img src="./uploads'.$row['image_1'].'" alt="">';
                 echo '  </div>';
                 echo '   <div class="container">';
                 echo "<h1><b>" . $row['title'] . "</b></h1>";
