@@ -17,7 +17,7 @@ if(!empty($_SESSION['id'])){
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Movies</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -46,7 +46,7 @@ if(!empty($_SESSION['id'])){
                 }
                 
                 echo '<div class="card">';
-                echo '<a href="./movie_details_preview.php">';
+                echo '<a href="./movie_details_preview.php?id='. $row['movie_id'] .'">';
                 echo '<div class="image">';
                 echo '  <img src="./Img/1.png" alt="">';
                 echo '  </div>';

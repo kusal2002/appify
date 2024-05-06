@@ -1,10 +1,10 @@
 <?php
 session_start();
-require 'config.php';
+require '../config.php';
 if (!empty($_SESSION['sessionid'])) {
-    $sessionid = $_SESSION["sessionid"];
-    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
-    $row = mysqli_fetch_assoc($result);
+  $sessionid = $_SESSION["sessionid"];
+  $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
+  $row = mysqli_fetch_assoc($result);
 }
 
 
@@ -21,7 +21,7 @@ if (!empty($_SESSION['sessionid'])) {
 
 <body>
 
-<?php include_once './layout/sidebar.php'?>
+  <?php include_once './layout/sidebar.php' ?>
 
 
   <div class="content">
@@ -64,20 +64,38 @@ if (!empty($_SESSION['sessionid'])) {
             <br>
             <table>
               <tr style="width: 100%;">
-                <th>User Name</th>
-                <th>Email</th>
+                <th>User ID</th>
+                <th>Name</th>
                 <th>Mobile Number</th>
-                <th>Update Data</th>
-                <th>Status</th>
+                <th>Address</th>
+                <th>email</th>
                 <th>Edit</th>
               </tr>
               <tr>
-                <td>lithira</td>
-                <td>lithira@gmail.com</td>
-                <td>US</td>
-                <td>10/07/2023</td>
-                <td><button class="avtivebtn">Active</button></td>
-                <td><img src="Img\icons\pen.svg" id="iconpen"></td>
+                <?php
+                $sql = "select * from `user`";
+                $result = mysqli_query($con, $sql);
+                if ($result) {
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    $id = $row['user_id'];
+                    $name = $row['f_name'];
+                    $email = $row['phone_number'];
+                    $mobile = $row['address'];
+                    $email = $row['email'];
+                    echo '  <tr>
+                    <th scope="row">' . $id . '</th>
+                    <td>' . $name . '</td>
+                    <td>' . $email . '</td>
+                    <td>' . $mobile . '</td>
+                    <td>' . $password . '</td>
+                    <td>
+                    <button class="btn btn-primary"><a href="update.php? updateid=' . $id . '" class="text-light">Update</a></button>
+                    <button class="btn btn-danger"><a href="delete.php? deleteid=' . $id . '" class="text-light">Delete</a></button>
+                    </td>
+                    </tr>';
+                  }
+                }
+                ?>
               </tr>
             </table>
           </div>

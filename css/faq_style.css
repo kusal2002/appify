@@ -25,7 +25,7 @@
             font-size: large;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(255, 255, 255);
-            background: rgb(55, 195, 162);
+            background: #00bdd6;
             border-radius: 10px; 
         }
         .accordion:hover{

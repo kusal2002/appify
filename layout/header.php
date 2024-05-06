@@ -14,7 +14,7 @@ if (!empty($_SESSION['sessionid'])) {
 <div class="navbar">
     <div class="container">
         <div class="logo">
-            <img src="img/logo.png" alt="logo">
+            <a href="./index.php"><img src="img/logo.png" alt="logo"></a>
         </div>
         <div class="links">
             <li><a href="./index.php" <?php if (basename($_SERVER['PHP_SELF']) == 'index.php')
@@ -27,6 +27,10 @@ if (!empty($_SESSION['sessionid'])) {
                 echo 'class="active"'; ?>>Books</a> </li>
             <li><a href="./blog.php" <?php if (basename($_SERVER['PHP_SELF']) == 'blog.php')
                 echo 'class="active"'; ?>>Blog</a> </li>
+            <li><a href="./aboutus.php" <?php if (basename($_SERVER['PHP_SELF']) == 'aboutus.php')
+                echo 'class="active"'; ?>>About Us</a> </li>
+            <li><a href="./contactus.php" <?php if (basename($_SERVER['PHP_SELF']) == 'contactus.php')
+                echo 'class="active"'; ?>>Contact Us</a> </li>
 
 
         </div>
