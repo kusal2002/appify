@@ -121,7 +121,7 @@ p {
   text-align: center;
 }
 
-/* Number text */
+/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -130,7 +130,7 @@ p {
   top: 0;
 }
 
-/* The dots */
+/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -147,7 +147,7 @@ p {
   background-color: #717171;
 }
 
-/* Fade animation */
+/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;

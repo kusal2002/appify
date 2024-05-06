@@ -284,7 +284,7 @@ h1 {
 }
 
 .containerrrr .left {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(220, 16, 16);
   width: 50%;
   height: 100vh;
 }
@@ -296,7 +296,7 @@ h1 {
 }
 
 .containerrrr .right {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(134, 0, 211);
   height: 100vh;
   float: right;
   
