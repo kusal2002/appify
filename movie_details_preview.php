@@ -45,6 +45,7 @@
             </div>
         </div>
         <div class="right">
+            
             <div style="display: flex;">
                 <h1 style="margin-bottom: 4%;">Interstellar</h1>
                 <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">

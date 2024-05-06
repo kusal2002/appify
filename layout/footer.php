@@ -33,7 +33,7 @@
                 <tr>
                     <td><a href="./blog.php">Blog</a></td>
                     <td><a href="./admin/blog_create.php">Publish Your Blog</a></td>
-                    <td><a href="faq.html">FAQ</a></td>
+                    <td><a href="faq.php">FAQ</a></td>
                 </tr>
             </table>
         </div>
