@@ -74,14 +74,8 @@ if (isset($_POST['submit'])) {
                         <label><b style="font-size: 15px">App Name :</b></label><br>
                         <input class="text" type="text" name="appname" value="<?php echo $bookname; ?>"><br><br>
 
-                        <label><b style="font-size: 15px">Choose Genre :</b></label><br>
-                        <select id="genre" name="genre">
-                            <option selected disabled>Choose Category</option>
-                            <option value="Fantasy" <?php if ($bookgenre == 'Fantacy') echo 'selected'; ?>>Fantasy</option>
-                            <option value="Novel" <?php if ($bookgenre == 'Novel') echo 'selected'; ?>>Novel</option>
-                            <option value="Thriller" <?php if ($bookgenre == 'Thriller') echo 'selected'; ?>>Thriller</option>
-                            <option value="Biographic" <?php if ($bookgenre == 'Biographic') echo 'selected'; ?>>Biographic</option>
-                        </select><br><br>
+                        <label><b style="font-size: 15px">Genre :</b></label><br>
+                        <input class="text" type="text" name="year" value="<?php echo $bookgenre; ?>"><br><br>
                         
                         <label><b style="font-size: 15px">Description :</b></label><br>
                         <textarea name="bookescription" id="description" cols="30" rows="2"><?php echo $bookdescription; ?></textarea><br><br>
