@@ -1,16 +1,14 @@
 <?php
 include("../config.php");
 $id = $_GET['updateid'];
-$sql = "SELECT * FROM `movie` WHERE movie_id =$id";
+$sql = "SELECT * FROM `blogs` WHERE blog_id =$id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $title = $row['title'];
-$category = $row['category'];
-$movie_description = $row['movie_description'];
-$price = $row['price'];
-$cast = $row['cast'];
-$year = $row['year'];
-$Dlink = $row['download_link'];
+$category = $row['categories'];
+$content = $row['content'];
+$discription = $row['discription'];
+
 
 if (isset($_POST["submit"])) {
 
@@ -27,11 +25,11 @@ if (isset($_POST["submit"])) {
 
     $image_path = "./images/$image";
 
-    $sql = "INSERT INTO blogs (title,categories,image_1,content,discription) VALUES('$blogtitle','$blogcatogary','$image_path','$content','$description')";
+    $sql = "update `blogs` set title='$title',categories='$category',discription='$discription',content='$content'  where blog_id=$id";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        echo "<script>alert('Data inserted successfully')</script>";
+        echo "<script>alert('Data updated successfully')</script>";
     } else {
         die(mysqli_error($conn));
     }
@@ -63,24 +61,24 @@ if (isset($_POST["submit"])) {
                     <div class="left">
                         <div class="form">
                             <label><b style="font-size: 15px">Blog Title :</b></label><br />
-                            <input class="text" type="text" name="blogtitle" /><br /><br />
+                            <input class="text" type="text" name="blogtitle" value="<?php echo $title; ?>"><br /><br />
 
                             <label><b style="font-size: 15px">Small Description :</b></label><br />
-                            <input class="text" type="text" name="blogdescription" /><br /><br />
+                            <input class="text" type="text" name="blogdescription" value="<?php echo $title; ?>"><br /><br />
 
-                            <label><b style="font-size: 15px">Choose Catogary :</b> </label><br />
+                            <label><b style="font-size: 15px">Choose category :</b> </label><br />
                             <select id="catogary" name="blogcatogary">
                                 <option selected disabled>Choose Catogary</option>
-                                <option value="Games">Tech</option>
-                                <option value="Entertainment">Entertainment</option>
-                                <option value="Education">Education</option>
-                                <option value="Helth">Helth</option>
-                                <option value="Helth">Lifestyle</option>
+                                <option value="Tech"<?php if ($category == 'Tech') echo 'selected'; ?>>Tech</option>
+                                <option value="Entertainment"<?php if ($category == 'Entertainment') echo 'selected'; ?>>Entertainment</option>
+                                <option value="Education"<?php if ($category == 'Education') echo 'selected'; ?>>Education</option>
+                                <option value="Helth"<?php if ($category == 'Helth') echo 'selected'; ?>>Helth</option>
+                                <option value="Lifestyle"<?php if ($category == 'Lifestyle') echo 'selected'; ?>>Lifestyle</option>
                             </select>
                             <br /><br />
 
                             <label><b style="font-size: 15px">Content :</b></label><br />
-                            <textarea name="Content" id="content" cols="30" rows="2"></textarea><br /><br />
+                            <textarea name="content" id="content" cols="30" rows="2" value="<?php echo $content; ?>"></textarea><br /><br />
 
 
                             
@@ -89,7 +87,7 @@ if (isset($_POST["submit"])) {
                             <input type="file" name="image" /><br /><br />
 
                             <button type="submit" name="submit" class="ebtn">
-                                Publish
+                                Update
                             </button>
                         </div>
                     </div>
