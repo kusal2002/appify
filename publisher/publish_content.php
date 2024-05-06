@@ -56,7 +56,7 @@
                     <input type="file" style="padding-left: 10%;">
                 </div>
                 <div class="end">
-                    <button class="ebtn">Priview</button>
+                    <button class="ebtn">Preview</button>
                     <button class="ebtn">Publish</button>
                 </div>
             </div>
