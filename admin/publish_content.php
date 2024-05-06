@@ -298,14 +298,8 @@ if (isset($_POST['submit1'])) {
             <label><b style="font-size: 15px">Author :</b></label><br>
             <input class="text" type="text" name="Author"><br><br>
 
-            <label><b style="font-size: 15px">Choose Language :</b></label><br>
-            <select id="catogary" name="languagecatogary">
-                <option selected disabled>Choose Catogary </option>
-                <option value="English">English</option>
-                <option value="Sinhala">Sinhala</option>
-                <option value="Hindi">Hindi</option>
-                <option value="Malayalam">Malayalam</option>
-            </select><br><br>
+            <label><b style="font-size: 15px">Language :</b></label><br>
+            <input class="text" type="text" name="Language"><br><br>
 
             <label><b style="font-size: 15px">Pages :</b></label><br>
             <input class="text" type="text" name="Pages"><br><br>
