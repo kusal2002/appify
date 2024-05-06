@@ -45,42 +45,57 @@
             </div>
         </div>
         <div class="right">
-            <div style="display: flex;">
-                <h1 style="margin-bottom: 4%;">Interstellar</h1>
-                <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
-            </div>
-            
-            
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
+            <?php
+            require 'config.php';
+            $sql = "SELECT * FROM movie WHERE `movie_id` = $_GET[id]";
 
-            <h5>368 reviews </h5>
-            <h5>823 downloads</h5>
-            <h5>Year : 2014</h5>
-            <h5>Genre: Sci-Fi</h5>
-            <h5>Director : Christopher Nolan</h5>
-            <h5>Cast : Matthew David McConaughey  , Anne Hathaway</h5>
-            <h5>Language : English</h5><br>
-            <div style="display: flex;">
-                <button id="btnq" class="selected">720p</button>
-                <button id="btnq">1080p</button>
-                <button id="btnq">4K</button>
-            </div>
-            <br>
-            <div style="display: flex;">
-                <button id="btndown"><img src="./Img/icons/film.svg" style="padding-right: 5%; width: 10%; float: inline-start;">Watch Trailer</button>
-                <button id="btndown"><img src="./Img/icons/icons/outline/24px/download.svg" style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
-            </div>
+            $result = mysqli_query($conn, $sql);
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $movieId = $row['movie_id'];
+                    $movieTitle = $row['title'];
+                    $movieYear = $row['year'];
 
-            <p style="text-align: justify; padding-right: 40%;">
-                TimeTrack is your go-to app for effective time management, helping you stay organized, productive, and on top of your schedule. With intuitive features and customizable options, TimeTrack empowers you to make the most of your time, whether you're juggling work tasks, personal projects, or academic assignments.
-            </p>
-            <h4 style="margin: 0;">Write a review ✍️</h4>
-            <textarea name="review" id="review" cols="45" rows="8"></textarea>
-            <input id="submit" type="submit" value="Submit">
+                    echo '<div style="display: flex;">
+                    <h1 style="margin-bottom: 4%; padding-bottom: 5%">Interstellar</h1>
+                    <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
+                </div>
+                
+                
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+    
+                <h5>368 reviews </h5>
+                <h5>823 downloads</h5>
+                <h5>Year : 2014</h5>
+                <h5>Genre: Sci-Fi</h5>
+                <h5>Director : Christopher Nolan</h5>
+                <h5>Cast : Matthew David McConaughey  , Anne Hathaway</h5>
+                <h5>Language : English</h5><br>
+                <div style="display: flex;">
+                    <button id="btnq" class="selected">720p</button>
+                    <button id="btnq">1080p</button>
+                    <button id="btnq">4K</button>
+                </div>
+                <br>
+                <div style="display: flex;">
+                    <button id="btndown"><img src="./Img/icons/film.svg" style="padding-right: 5%; width: 10%; float: inline-start;">Watch Trailer</button>
+                    <button id="btndown"><img src="./Img/icons/icons/outline/24px/download.svg" style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
+                </div>
+
+                <br>
+                <p style="text-align: justify; padding-right: 40%;">
+                    TimeTrack is your go-to app for effective time management, helping you stay organized, productive, and on top of your schedule. With intuitive features and customizable options, TimeTrack empowers you to make the most of your time, whether you are juggling work tasks, personal projects, or academic assignments.
+                </p><br>
+                <h4 style="margin: 0;">Write a review ✍️</h4>
+                <textarea name="review" id="review" cols="45" rows="8"></textarea>
+                <input id="submit" type="submit" value="Submit">' ;
+                }
+            }
+            ?>
         </div>
     </div>
 
