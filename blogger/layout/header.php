@@ -1,7 +1,7 @@
 <div class="navbar">
     <div class="container">
         <div class="logo">
-            <img src="img/logo.png" alt="logo">
+            <img src="img/logo.png" alt="logo" > 
         </div>
         <div class="links">
             <li><a href="./index.php" <?php if(basename($_SERVER['PHP_SELF']) == 'index.php') echo 'class="active"'; ?>>Home</a> </li>
@@ -13,8 +13,8 @@
 
         </div>
         <div class="auth">
-            <button><a href="login.php"">Login</a></button>
-              <button><a href=" register.php"">Register</a></button>
+            <button><a href="login.php">Login</a></button>
+              <button><a href=" register.php">Register</a></button>
         </div>
     </div>
 </div>
