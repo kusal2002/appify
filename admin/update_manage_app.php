@@ -11,10 +11,7 @@ $appPrice = $row['price'];
 // $image_path
 
 if (isset($_POST['submit'])) {
-
-    //app details
-    $appname = $_POST['appname'];
-    $appcategory = $_POST['appcatogary'];
+ 
     $appdescription = $_POST['appdescription'];
     $appPrice = $_POST['appprice'];
 
