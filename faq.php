@@ -12,9 +12,9 @@
 
   <?php include_once './layout/header.php' ?>
   
-    <h2 style="color: rgb(242, 241, 247); text-align: center">Frequently Asked Questions</h2>
-    <h5 style="color: white ; text-align: center">Have questions? </h5><br>
-    <h5 style="color:white; text-align: center;"> you'll find the answers most valued by partners, along with access to step by step instructions and support</h5>
+    <h1 style="color: rgb(242, 241, 247); text-align: center">Frequently Asked Questions</h1>
+    <h3 style="color: white ; text-align: center">Have questions? </h3><br>
+    <h3 style="color:white; text-align: center; margin-left:35%;margin-right:35%"> you'll find the answers most valued by partners, along with access to step by step instructions and support</h3>
     <div class="layout">
       <div class="accordion">
         <div class="accordion__question">
