@@ -135,7 +135,7 @@ if (isset($_POST['submit1'])) {
                                 <option value="Games">Games</option>
                                 <option value="Entertainment">Entertainment</option>
                                 <option value="Education">Education</option>
-                                <option value="Helth">Helth</option>
+                                <option value="Helth">Health</option>
                             </select><br><br>
 
                             <label><b style="font-size: 15px">Description :</b></label><br>
@@ -211,7 +211,7 @@ if (isset($_POST['submit1'])) {
                                 <option value="Games">Games</option>
                                 <option value="Entertainment">Entertainment</option>
                                 <option value="Education">Education</option>
-                                <option value="Helth">Helth</option>
+                                <option value="Helth">Health</option>
                             </select><br><br>
 
                             <label><b style="font-size: 15px">Description :</b></label><br>
