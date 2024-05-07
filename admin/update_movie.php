@@ -12,37 +12,28 @@ $movie_description = $row['movie_description'];
 $price = $row['price'];
 $cast = $row['cast'];
 $year = $row['year'];
-$Dlink = $row['download_link'];
 
 
 
 
-if (isset($_POST['submit2'])) {
+if (isset($_POST['submit'])) {
     //movie details
     $moviename = $_POST['moviename'];
     $moviedescription = $_POST['moviedescription'];
     $movieprice = $_POST['movieprice'];
     $movieyear = $_POST['movieyear'];
-    $videolink = $_POST['movietrailer'];
     $director = $_POST['moviecast'];
     $moviecatogary = $_POST['moviecatogary'];
-    $movieprice = $_POST['movieprice'];
 
-
-    //image upload
-    $image = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image']['tmp_name'];
-    move_uploaded_file($image_tmp, "../uploads/images/$image");
 
     //file upload
     $file = $_FILES['file']['name'];
     $file_tmp = $_FILES['file']['tmp_name'];
     move_uploaded_file($file_tmp, "../uploads/files/$file");
 
-    $image_path = "./images/$image";
     $file_path = "./files/$file";
 
-    $sql = "update `movie` set title='$moviename',category='$moviecatogary',movie_description='$moviedescription',cast='$director', year='$movieyear' , download_link='$videolink'  where movie_id=$id";
+    $sql = "update `movie` set title='$moviename',category='$moviecatogary',movie_description='$moviedescription',cast='$director', year='$movieyear',price='$movieprice',upload_files='$file_path'  where movie_id=$id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script>alert("Data inserted successfully")</script>';
@@ -89,6 +80,7 @@ if (isset($_POST['submit2'])) {
                                 <option value="Education" <?php if ($category == 'Education') echo 'selected'; ?>>Education</option>
                                 <option value="Helth" <?php if ($category == 'Helth') echo 'selected'; ?>>Helth</option>
                             </select><br><br>
+                            
 
                             <label><b style="font-size: 15px">Description :</b></label><br>
                             <textarea name="moviedescription" id="description" cols="30" rows="2" ><?php echo $movie_description; ?></textarea><br><br>
@@ -117,15 +109,11 @@ if (isset($_POST['submit2'])) {
                         </div>
                     </div>
                     <div class="right">
-                        <!-- <div class="uploadfile">
-                            <h2 style="padding-left: 10%; padding-top: 5%;">Upload Files Here</h2>
-                            <input type="file" name="file" style="padding-left: 10%;"><br><br>
-                        </div> -->
                         <div class="addimage">
                             <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
-                            <input type="file" name="video" style="padding-left: 10%;">
+                            <input type="file" name="file" style="padding-left: 10%;">
                             <br>
-                            <button type="submit2" name="submit2" class="ebtn">Update</button>
+                            <button type="submit" name="submit" class="ebtn">Update</button>
                             
                         </div>
                     </div>

@@ -6,10 +6,6 @@ if (!empty($_SESSION['sessionid'])) {
     $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
     $row = mysqli_fetch_assoc($result);
 }
-// else{
-//     header("location: login.php");
-//     exit();
-// }
 
 ?>
 
@@ -20,8 +16,6 @@ if (!empty($_SESSION['sessionid'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin:Manage Books</title>
-    <!-- <link rel="stylesheet" href="../css/admin_style.css"> -->
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css/publisher_style.css">
 
 
