@@ -39,8 +39,8 @@ require 'config.php';
 
                     echo '  
                     <div class="left">
-                    <img src="./uploads' . $row['app_profile_img'] . '" alt="">            
-                        </div>
+                    <img id="bookimg" src="./uploads' . $row['app_profile_img'] . '" alt="">
+                </div>
                 <div class="right">
                     
                     
