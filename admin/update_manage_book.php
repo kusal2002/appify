@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
             <div class="containerrrr">
                 <div class="left">
                     <div class="form">
-                        <label><b style="font-size: 15px">App Name :</b></label><br>
+                        <label><b style="font-size: 15px">Book Name :</b></label><br>
                         <input class="text" type="text" name="bookname" value="<?php echo $bookname; ?>"><br><br>
 
                         <label><b style="font-size: 15px">Author :</b></label><br>
@@ -113,8 +113,7 @@ if (isset($_POST['submit'])) {
                     <div class="addimage">
                         <h2 style="padding-left: 10%; padding-top: 5%;">Add Images or Video</h2>
                         <input type="file" name="file1" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="file2" style="padding-left: 10%;"><br><br>
-                        <input type="file" name="file3" style="padding-left: 10%;"><br><br>
+                        
                     </div><br><br><br><br>
                     <div class="end">
                         <!-- <button class="ebtn">Preview</button> -->
