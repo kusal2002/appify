@@ -24,7 +24,7 @@ require 'config.php';
         <div class="left">
             <div class="img1">
                 <video id="bigimg" controls>
-                    <source src="./videos/Wildlife Windows 7 Sample Video.mp4" type="video/mp4">
+                    <source src="./uploads/videos/sample.mp4" type="video/mp4">
                 </video>
             </div>
 
