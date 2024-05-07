@@ -72,7 +72,7 @@ if (isset($_POST["submit"])) {
                                 <option value="Tech"<?php if ($category == 'Tech') echo 'selected'; ?>>Tech</option>
                                 <option value="Entertainment"<?php if ($category == 'Entertainment') echo 'selected'; ?>>Entertainment</option>
                                 <option value="Education"<?php if ($category == 'Education') echo 'selected'; ?>>Education</option>
-                                <option value="Helth"<?php if ($category == 'Helth') echo 'selected'; ?>>Helth</option>
+                                <option value="Helth"<?php if ($category == 'Helth') echo 'selected'; ?>>Health</option>
                                 <option value="Lifestyle"<?php if ($category == 'Lifestyle') echo 'selected'; ?>>Lifestyle</option>
                             </select>
                             <br /><br />
