@@ -47,7 +47,7 @@ if (!empty($_SESSION['sessionid'])) {
                 echo '
                     <div class="card">
                         <div class="image">
-                            <img src="../Img/1.png" alt="">
+                            <img src="../uploads' . $row['image_1'] . '" alt="">
                         </div>
                         <center>
                         <div class="container">
