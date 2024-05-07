@@ -21,7 +21,9 @@ require 'config.php';
 
 
     <div class="apppreviewcontainer">
-    <?php
+
+
+            <?php
             require 'config.php';
             $sql = "select * from apps where `app_id` = $_GET[id]";
 
@@ -35,40 +37,45 @@ require 'config.php';
                     $appPrice = $row['price'];
 
 
-                    echo '
-        <div class="left">
-            <img src="./uploads' . $row['app_profile_img'] . '" alt="">
-        </div>
-        <div class="right">
-            <h1><b>' . $appname . '</b></h1></th>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
+                    echo '  
+                    <div class="left">
+                    <img src="./uploads' . $row['app_profile_img'] . '" alt="">            
+                        </div>
+                <div class="right">
+                    
+                    
+                    <h1><b>' . $appname . '</b></h1></th>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
         
-            <!-- <h5>500K+ reviews</h5>
-            <h5>10M+ downloads</h5>
-            <h5>Size : 284.8 MB</h5> -->
-            <h3><b>Category : </b>' . $row['category'] . '</h3>
-            <h5>Developer : Meta Inc.</h5><br>
-            <div style="display: flex;">
-                <button id="btndown"><img src="./Img/icons/icons/outline/24px/download.svg"
-                        style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
-                <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
-            </div>
-            <p style="text-align: justify; padding-right: 40%;"><br>' . $appdescription . '<br><br></p>
-            <h4 style="margin: 0;">Write a review ✍️</h4>
-            <textarea name="review" id="review" cols="45" rows="8"></textarea>
-            <input id="submit" type="submit" value="Submit">
-        </div>';
+                    <!-- <h5>500K+ rewiews</h5>
+                    <h5>10M+ downloads</h5>
+                    <h5>Size : 284.8 MB</h5> -->
+                    <h3><b>Category : </b>' . $row['category'] . '</h3>
+                    <h5>Developer : Meta Inc.</h5><br>
+                    <div style="display: flex;">
+                        <button id="btndown"><img src="./Img/icons/icons/outline/24px/download.svg"
+                                style="padding-right: 5%; width: 10%; float: inline-start;">Download</button>
+                        <img src="./Img/icons/icons8-share.svg" style="padding-left: 5%;">
+                    </div>
+                    <p style="text-align: justify; padding-right: 40%;"><br>' . $appdescription . '<br><br></p>
+                    <h4 style="margin: 0;">Write a review ✍️</h4>
+                    <textarea name="review" id="review" cols="45" rows="8"></textarea>
+                    <input id="submit" type="submit" value="Submit">
+                </div>
+                </div>';
                 }
             }
-        ?>
+            ?>
+
+        
+
+        <?php include_once './layout/footer.php' ?>
 
     </div>
-    <?php include_once './layout/footer.php' ?>
-
 </body>
 
 </html>
