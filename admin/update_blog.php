@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
 
     $image_path = "./images/$image";
 
-    $sql = "update `blogs` set title='$title',categories='$category',discription='$discription',content='$blogcontent'  where blog_id=$id";
+    $sql = "update `blogs` set title='$blogtitle',categories='$blogcatogary',discription='$description',content='$content'  where blog_id=$id";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -69,16 +69,16 @@ if (isset($_POST["submit"])) {
                             <label><b style="font-size: 15px">Choose category :</b> </label><br />
                             <select id="catogary" name="blogcatogary">
                                 <option selected disabled>Choose Catogary</option>
-                                <option value="Tech"<?php if ($category == 'Tech') echo 'selected'; ?>>Tech</option>
-                                <option value="Entertainment"<?php if ($category == 'Entertainment') echo 'selected'; ?>>Entertainment</option>
-                                <option value="Education"<?php if ($category == 'Education') echo 'selected'; ?>>Education</option>
-                                <option value="Helth"<?php if ($category == 'Helth') echo 'selected'; ?>>Helth</option>
-                                <option value="Lifestyle"<?php if ($category == 'Lifestyle') echo 'selected'; ?>>Lifestyle</option>
+                                <option value="Tech" <?php if ($category == 'Tech') echo 'selected'; ?>>Tech</option>
+                                <option value="Entertainment" <?php if ($category == 'Entertainment') echo 'selected'; ?>>Entertainment</option>
+                                <option value="Education" <?php if ($category == 'Education') echo 'selected'; ?>>Education</option>
+                                <option value="Helth" <?php if ($category == 'Helth') echo 'selected'; ?>>Helth</option>
+                                <option value="Lifestyle" <?php if ($category == 'Lifestyle') echo 'selected'; ?>>Lifestyle</option>
                             </select>
                             <br /><br />
 
                             <label><b style="font-size: 15px">Content :</b></label><br />
-                            <textarea name="content" id="content" cols="30" rows="2" value="<?php echo $blogcontent; ?>"></textarea><br /><br />
+                            <textarea name="content" id="content" cols="30" rows="2" ><?php echo $blogcontent; ?></textarea><br /><br />
 
 
                             
