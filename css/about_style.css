@@ -54,6 +54,7 @@
     font-size: xx-large;
     text-align:justify;
     margin-right: 5px;
+    color: white;
     
 }
 
@@ -100,6 +101,7 @@
 .hname,.position,.descri {
     margin: 0px;
     padding-left: 10%;
+    color: white;
 }
 
 .position{

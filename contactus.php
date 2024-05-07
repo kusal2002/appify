@@ -26,7 +26,7 @@
                 <label id="det">(+1) 123 456 7893</label>
                 <br><br>
                 <img class="svg" src="./Img/mail.svg">
-                <label id="det">name@email.com</label>
+                <label id="det">appify@email.com</label>
                 <br>
             </div>
             <img src="./Img/image.jpeg" class="image">
