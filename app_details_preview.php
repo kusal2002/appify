@@ -23,7 +23,7 @@ require 'config.php';
     <div class="apppreviewcontainer">
 
         <div class="left">
-            <img id="bookimg" src="./Img/1.png">
+            <img id="bookimg" src="../uploads " alt="">
         </div>
         <div class="right">
             <?php
