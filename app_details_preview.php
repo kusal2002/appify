@@ -59,8 +59,11 @@ require 'config.php';
                     </div>
                     <p style="text-align: justify; padding-right: 40%;"><br>' . $appdescription . '<br><br></p>
                     <h4 style="margin: 0;">Write a review ✍️</h4>
-                    <textarea name="review" id="review" cols="45" rows="8"></textarea>
-                    <input id="submit" type="submit" value="Submit">
+                    <form method="post">
+                        <textarea name="review" id="review" cols="45" rows="8"></textarea>
+                        <input id="submit" type="reset" value="Submit">
+                    </form>
+                    
                 </div>';
                 }
             }

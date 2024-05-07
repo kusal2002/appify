@@ -38,7 +38,7 @@
             </table>
         </div>
     </div>
-    <div class="cren">
+    <div class="cren"></div>
         <h4>© 2024 Sliit MLB_07.02_09.</h4>
     </div>
 </div>
