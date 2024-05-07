@@ -318,7 +318,7 @@ if (isset($_POST['submit1'])) {
 
     </div>
 
-
+    <!-- source: w3 school -->
     <script>
         function openCity(evt, cityName) {
             var i, tabcontent, tablinks;
