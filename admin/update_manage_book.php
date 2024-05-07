@@ -117,7 +117,7 @@ if (isset($_POST['submit'])) {
                     <div class="end">
                         <!-- <button class="ebtn">Preview</button> -->
                         <!-- <button type="submit" class="ebtn">Publish</button> -->
-                        <button type="submit" name="submit" class="ebtn">Publish</button>
+                        <button type="submit" name="submit" class="ebtn">Update</button>
 
                     </div>
                 </div>
