@@ -36,11 +36,6 @@ if (!empty($_SESSION['sessionid'])) {
         <li><a href="./manage_book.php">MANAGE Books</a></li>
     </ul>
     <ul>
-        <label>Apps</label>
-        <li>CREATE USERS</li>
-        <li>MANAGE USERS</li>
-    </ul>
-    <ul>
         <label>Blog</label>
         <li><a href="blog_create.php">CREATE BLOG</a></li>
         <li><a href="./manage_blog.php">MANAGE BLOG</a></li>
