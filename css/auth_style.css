@@ -1,51 +1,55 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #2d3c3e;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2d3c3e;
 }
-  
-  #login {
-    width: 600px;
-    padding: 20px 50px;
-    background-color: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    margin-left: auto;
-    margin-right: auto;
-    
-   
-  }
-  label {
-    font-size : 120px;
-    display: block;
-    margin-top: 20px;
-  }
-  input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  button[type="submit"] {
-    background-color: #07636d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button[type="submit"]:hover {
-    background-color: #07636d;
-  }
-  h1{
-    color: #00bdd6;
-  }
 
-  .text {
-    width: 90%;
-    height: 50px;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: rgb(255, 255, 255); /* primary-500 */
-    border-style: solid;
-    background-color: rgb(235, 234, 233);
-    font-size: large;
-  }
-  
+#login {
+  width: 600px;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-left: auto;
+  margin-right: auto;
+}
+label {
+  font-size: 20px;
+  display: block;
+  margin-top: 20px;
+  color:white;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+button[type="submit"] {
+  background-color: #07636d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #07636d;
+}
+h1 {
+  color: #00bdd6;
+}
+
+.text {
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255); /* primary-500 */
+  border-style: solid;
+  background-color: rgb(235, 234, 233);
+  font-size: large;
+}
+
+.editprofile {
+ padding-left: 50px;
+ padding-right: 50px;
+}

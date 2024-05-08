@@ -72,7 +72,7 @@ if(isset($_POST['submit']))
     <lable>Email</lable>
     <input type="text" class="text" id="email" name="useremail">
     <lable>Password</lable>
-    <input type="text" class="text"  id="password" name="password"><br><br>
+    <input type="password" class="text"  id="password" name="password"><br><br>
 
     <p><input type="checkbox" id="rememberme" name="rememberme">
       Remember me &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="kofie">Forgot password?</a></p><br>

@@ -204,9 +204,9 @@ if (isset($_POST['submit'])) {
         <lable>Email</lable><br>
         <input type="text" class="text" name="email"><br><br>
         <lable>Password</lable><br>
-        <input type="text" class="text" name="password"><br><br>
+        <input type="password" class="text" name="password"><br><br>
         <lable>Confirm Password</lable><br>
-        <input type="text" class="text" name="cpassword">
+        <input type="password" class="text" name="cpassword">
       </center><br><br>
       <input type="hidden" name="role" value="2">
       <center><button type="submit" name="submit">REGISTER</button>

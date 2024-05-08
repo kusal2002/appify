@@ -37,7 +37,7 @@ if (!empty($_SESSION['sessionid'])) {
 
         <div class="auth">
             <?php if (!empty($_SESSION['sessionid'])): ?>
-                <h2 style="color:#00bdd6">Welcome <?php echo $row["f_name"]; ?></h2>
+                <a href="./editprofile.php"><h2 style="color:#00bdd6">Welcome <?php echo $row["f_name"]; ?></h2></a>
                 <button class="logoutbtn"><a href="logout.php">logout</a></button>
 
             <?php endif; ?>

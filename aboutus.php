@@ -1,3 +1,17 @@
+<?php
+session_start();
+require 'config.php';
+if (!empty($_SESSION['sessionid'])) {
+    $sessionid = $_SESSION["sessionid"];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $sessionid");
+    $row = mysqli_fetch_assoc($result);
+}
+// else{
+//     header("location: login.php");
+//     exit();
+// }
+?>
+
 <!DOCTYPE html>
 <html>
 
